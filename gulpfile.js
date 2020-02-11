@@ -69,33 +69,38 @@ function vendorStyles() {
 }
 
 function styles() {
-  return gulp
-    .src(`${settings.paths.src.styles}styles.scss`, { sorcmaps: true })
-    .pipe(wait(200))
-    .pipe(sass({ outputStyle: "compressed" }))
-    .on("error", sass.logError)
-    .pipe(
-      rename({
-        suffix: ".min"
-      })
-    )
-    .pipe(autoprefixer())
-    .pipe(
-      gulpIf(
-        isDev,
-        gulp.dest(settings.paths.dest.styles, { sourcemaps: true }),
-        gulp.dest(settings.paths.dest.styles)
+  return (
+    gulp
+      .src(`${settings.paths.src.styles}styles.scss`, { sorcmaps: true })
+      .pipe(wait(200))
+      .pipe(sass({ outputStyle: "compressed" }))
+      .on("error", sass.logError)
+      .pipe(
+        rename({
+          suffix: ".min"
+        })
       )
-    )
-    .pipe(gulpIf(isDev, browserSync.stream()));
+      // .pipe(autoprefixer())
+      .pipe(
+        gulpIf(
+          isDev,
+          gulp.dest(settings.paths.dest.styles, { sourcemaps: true }),
+          gulp.dest(settings.paths.dest.styles)
+        )
+      )
+      .pipe(gulpIf(isDev, browserSync.stream()))
+  );
 }
 
 function fonts(done) {
   done();
 }
-function images(done) {
-  done();
+function images() {
+  return gulp
+    .src(`${settings.paths.src.images.all}**/*`)
+    .pipe(gulp.dest(settings.paths.dest.images.all));
 }
+
 function icons(done) {
   done();
 }
@@ -124,6 +129,9 @@ function watch(done) {
   gulp
     .watch(`${settings.paths.src.styles}**/*.scss`)
     .on("all", gulp.series(styles, browserSync.reload));
+  gulp
+    .watch(`${settings.paths.src.images.all}**/*`)
+    .on("all", gulp.series(images, browserSync.reload));
   done();
 }
 
