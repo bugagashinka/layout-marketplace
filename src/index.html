@@ -4,10 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketplace</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/libs.min.css" />
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <img src="./img/header/logo.png" alt="" class="logo__img" />
+              <span class="logo-text">
+                <span class="first__word">Mart</span
+                ><span class="second__word">Place</span>
+              </span>
+            </div>
+            <a href="" class="button header__btn">Become a Seller</a>
+            <div class="header__panel">
+              <a href="" class="header__icon-btn header__notify">
+                <img src="./img/header/alarm.png" alt="" />
+              </a>
+              <a href="" class="header__icon-btn header__messages">
+                <img src="./img/header/message.png" alt="" />
+              </a>
+              <a href="" class="header__icon-btn header__cart">
+                <img src="./img/header/cart.png" alt="" />
+              </a>
+              <div class="header__profile">
+                <img
+                  src="./img/header/logo1.png"
+                  alt=""
+                  class="profile__avatar"
+                />
+                <div class="profile__name">Taofiq Hakim</div>
+                <div class="profile__amount">$20.45</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="menu">
+        <div class="container">
+          <div class="menu__inner">
+            <ul class="menu__list">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">All products</a></li>
+              <li><a href="#">Wordpress</a></li>
+              <li><a href="#">Festures</a></li>
+              <li><a href="#">Pages</a></li>
+            </ul>
+            <form class="menu__search">
+              <input
+                type="text"
+                class="menu__search-field"
+                placeholder="Search product here..."
+              />
+              <button type="submit" class="button menu__search-btn"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <script src="./js/main.min.js"></script>
   </body>
 </html>

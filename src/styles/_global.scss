@@ -8,13 +8,66 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-color;
+}
+
 a {
   display: inline-block;
 }
 
-ul,
-li {
+@mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@mixin horizontal-list($left-margin, $text-color) {
+  @include reset-list;
+
+  li {
+    display: inline-block;
+  }
+  li + li {
+    margin-left: $left-margin;
+  }
+  li a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@mixin button(
+  $ver-padding,
+  $hor-padding,
+  $radius,
+  $color,
+  $bg-color,
+  $border-color: transparent
+) {
+  display: inline-block;
+  background-color: $color;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  text-decoration: none;
+  color: $color;
+  background-color: $bg-color;
+  padding: $ver-padding $hor-padding;
+}
+
+@mixin button-active($color, $bg-color) {
+  &:hover,
+  &:active {
+    color: $color;
+    background-color: $bg-color;
+  }
 }

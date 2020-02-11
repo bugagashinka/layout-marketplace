@@ -1,0 +1,137 @@
+// *** Header section styles ***
+
+.header {
+  .header__btn {
+    @include button(5px, 17px, 23px, #fff, $prm-btn-color);
+    margin-left: auto;
+    margin-right: 35px;
+    line-height: 24px;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__top {
+    background-color: $header-color;
+  }
+}
+
+// Header top
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  //   Logo
+  .header__logo {
+    vertical-align: bottom;
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 30px;
+      vertical-align: super;
+
+      .first__word {
+        color: #000000;
+      }
+      .second__word {
+        color: $prm-btn-color;
+      }
+    }
+  }
+
+  //   Header panel
+  .header__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__icon-btn {
+      display: inline-block;
+      width: 30px;
+      height: 25px;
+      text-align: center;
+      margin: 0 10px;
+
+      img {
+        vertical-align: sub;
+      }
+    }
+
+    // Header profile
+    .header__profile {
+      display: inline-block;
+      min-width: 180px;
+      margin-left: 33px;
+      line-height: 24px;
+      height: 55px;
+
+      .profile__avatar {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-right: 22px;
+        border-radius: 30px;
+        background: red;
+      }
+
+      .profile__name {
+        font-weight: 600;
+      }
+
+      .profile__amount {
+        font-size: 15px;
+        color: $price-color;
+      }
+    }
+  }
+}
+
+// Header menu
+.menu__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-size: 15px;
+  font-weight: 500;
+
+  .menu__list {
+    @include horizontal-list(25px, #333);
+    text-transform: uppercase;
+  }
+
+  // Menu search form
+  .menu__search {
+    position: relative;
+
+    .menu__search-field {
+      width: 360px;
+      padding: 15px 24px;
+      padding-right: 80px;
+      border: 1px solid rgb(217, 223, 229);
+      border-radius: 20px;
+      color: #898f96;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .menu__search-btn {
+      position: absolute;
+      display: block;
+      top: 0;
+      width: 70px;
+      height: 49px;
+      left: 100%;
+      transform: translate(-100%, 0);
+      border: 0;
+      border-radius: 23px;
+      background-image: url(../img/header/search-icon.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $prm-btn-color;
+    }
+  }
+}
+
+// *** Header section end ***
