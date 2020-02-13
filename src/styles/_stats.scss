@@ -18,30 +18,42 @@ $stats-colors: (
   }
 
   &__item {
-    color: #fff;
+    .lnr {
+      font-size: 48px;
 
-    &-img {
-      display: inline-block;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 47px;
-      background-repeat: no-repeat;
+      &-briefcase:before {
+        content: "\e84c";
+      }
+
+      &-cloud-download:before {
+        content: "\e865";
+      }
+
+      &-smile:before {
+        content: "\e854";
+      }
+
+      &-users:before {
+        content: "\e82b";
+      }
     }
 
     &-data {
       font-size: 36px;
+      margin-top: 52px;
     }
 
     &-caption {
       font-size: 18px;
       line-height: 36px;
+      color: #fff;
     }
 
     @each $name, $color in $stats-colors {
       &-#{$name} {
-        .stats__item-data {
-          color: unquote($color);
-        }
+        // .stats__item-data {
+        color: unquote($color);
+        // }
       }
     }
   }
