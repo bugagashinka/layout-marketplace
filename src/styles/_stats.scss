@@ -1,0 +1,50 @@
+$stats-colors: (
+  "cases": "#feb71d",
+  "sales": "#58c9e9",
+  "customers": "#77de51",
+  "members": "#ff6a6d"
+);
+
+.stats {
+  background-color: #0d0f13;
+  padding: 100px 0;
+  text-align: center;
+
+  &__list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    color: #fff;
+
+    &-img {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 47px;
+      background-repeat: no-repeat;
+    }
+
+    &-data {
+      font-size: 36px;
+    }
+
+    &-caption {
+      font-size: 18px;
+      line-height: 36px;
+    }
+
+    @each $name, $color in $stats-colors {
+      &-#{$name} {
+        .stats__item-data {
+          color: unquote($color);
+        }
+      }
+    }
+  }
+}
+
+//
