@@ -1,0 +1,203 @@
+.new-products {
+  padding: 120px 0px;
+  background-color: #f6f7fb;
+  text-align: center;
+
+  &__btn {
+    @include button(5px, 17px, 23px, #fff, $prm-btn-color);
+    margin-top: 60px;
+    padding: 21px 33px;
+  }
+
+  &__filter {
+    @include title-holder;
+
+    .filter__menu svg {
+      cursor: pointer;
+      margin-top: 50%;
+    }
+    .filter__menu svg path {
+      transition: all 0.3s;
+    }
+
+    .filter__menu svg:hover path {
+      fill: #000;
+    }
+
+    .title {
+      max-width: 90%;
+    }
+
+    span {
+      margin-left: auto;
+    }
+    .filter__menu {
+      margin-left: 25px;
+    }
+  }
+
+  .categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 92px;
+    padding: 40px 46px;
+    margin-bottom: 51px;
+    box-shadow: 0 1px 2px rgba(90, 93, 100, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    button {
+      padding: 9px 20px;
+      margin: 0 4px 8px;
+      border-radius: 16px;
+      background-color: #f1f3f6;
+      color: #747b86;
+      font-size: 15px;
+      border: none;
+      transition: all 0.3s;
+
+      &.mixitup-control-active,
+      &:hover {
+        cursor: pointer;
+        background: $prm-btn-color;
+        color: #fff;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product__item {
+      width: 361px;
+      margin-bottom: 31px;
+      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+      border-radius: 4px;
+      background-color: #ffffff;
+
+      a {
+        text-decoration: none;
+      }
+
+      &-head {
+        position: relative;
+
+        &:hover {
+          .item__info-btn,
+          .item__demo-btn {
+            opacity: 1;
+          }
+        }
+      }
+
+      &-img {
+        height: 230px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .product__item-buttons {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transform: translate(0, -50%);
+      }
+
+      .item__info-btn,
+      .item__demo-btn {
+        @include button(17px, 31px, 23px, #fff, transparent, #fff);
+        @include button-active($prm-btn-color, #fff);
+        margin: 0 5px;
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+
+      &-content {
+        padding: 30px;
+
+        .avatar {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          vertical-align: middle;
+        }
+      }
+
+      &-them {
+        margin-left: 7px;
+        font-size: 15px;
+        color: #000;
+      }
+
+      &-plugin {
+        margin-left: 45px;
+        color: #7347c1;
+        font-size: 15px;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-right: 9px;
+          vertical-align: bottom;
+          background: url(../img/new-products/icon/wordpress-icon.png)
+            center/cover no-repeat;
+        }
+      }
+
+      &-text {
+        margin-top: 32px;
+        color: #555555;
+        line-height: 30px;
+      }
+
+      &-footer {
+        display: flex;
+        padding: 16px 30px;
+        border-top: 1px solid #ececec;
+
+        .product__item-rate {
+          display: inline-block;
+          margin-left: 15px;
+          align-self: center;
+        }
+
+        .product__item-likes {
+          margin-left: 35px;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-right: 6px;
+            vertical-align: bottom;
+            background: url(../img/new-products/icon/heart-icon.png)
+              center/cover no-repeat;
+          }
+        }
+
+        .product__item-sold {
+          margin-left: auto;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            background: url(../img/new-products/icon/cart-icon.png) center/cover
+              no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
