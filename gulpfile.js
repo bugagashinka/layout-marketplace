@@ -8,6 +8,7 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const cssmin = require("gulp-cssmin");
 const wait = require("gulp-wait");
+const changed = require("gulp-changed");
 const del = require("del");
 
 const isDev = process.env.NODE_ENV === "development";
@@ -110,9 +111,13 @@ function styles() {
     .pipe(gulpIf(isDev, browserSync.stream()));
 }
 
-function fonts(done) {
-  done();
+function fonts() {
+  return gulp
+    .src(`${settings.paths.src.fonts}**/*.{ttf,woff,woff2,eot,svg}`)
+    .pipe(changed(settings.paths.dest.fonts))
+    .pipe(gulp.dest(settings.paths.dest.fonts));
 }
+
 function images() {
   return gulp
     .src(`${settings.paths.src.images.all}**/*`)
