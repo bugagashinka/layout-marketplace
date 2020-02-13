@@ -42,9 +42,14 @@ const settings = {
     styles: [
       "./node_modules/normalize.css/normalize.css",
       "./node_modules/magnific-popup/dist/magnific-popup.css",
-      "./node_modules/slick-carousel/slick/slick.css"
+      "./node_modules/slick-carousel/slick/slick.css",
+      "./node_modules/rateyo/src/jquery.rateyo.css"
     ],
-    scripts: []
+    scripts: [
+      "./node_modules/jquery/dist/jquery.js",
+      "./node_modules/mixitup/dist/mixitup.js",
+      "./node_modules/rateyo/src/jquery.rateyo.js"
+    ]
   }
 };
 
@@ -52,12 +57,27 @@ function clean() {
   return del(settings.paths.dest.root);
 }
 
-function vendorScripts(done) {
-  done();
+function vendorScripts() {
+  return gulp
+    .src(settings.vendor.scripts)
+    .pipe(concat("libs.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest(settings.paths.dest.scripts));
 }
 
-function scripts(done) {
-  done();
+function scripts() {
+  const destPath = settings.paths.dest.scripts;
+  return gulp
+    .src(`${settings.paths.src.scripts}**/*.js`, { sourcemaps: true })
+    .pipe(concat("main.min.js"))
+    .pipe(uglify())
+    .pipe(
+      gulpIf(
+        isDev,
+        gulp.dest(destPath, { sourcemaps: true }),
+        gulp.dest(destPath)
+      )
+    );
 }
 
 function vendorStyles() {
@@ -69,27 +89,25 @@ function vendorStyles() {
 }
 
 function styles() {
-  return (
-    gulp
-      .src(`${settings.paths.src.styles}styles.scss`, { sorcmaps: true })
-      .pipe(wait(200))
-      .pipe(sass({ outputStyle: "compressed" }))
-      .on("error", sass.logError)
-      .pipe(
-        rename({
-          suffix: ".min"
-        })
+  return gulp
+    .src(`${settings.paths.src.styles}styles.scss`, { sorcmaps: true })
+    .pipe(wait(200))
+    .pipe(sass({ outputStyle: "compressed" }))
+    .on("error", sass.logError)
+    .pipe(
+      rename({
+        suffix: ".min"
+      })
+    )
+    .pipe(autoprefixer())
+    .pipe(
+      gulpIf(
+        isDev,
+        gulp.dest(settings.paths.dest.styles, { sourcemaps: true }),
+        gulp.dest(settings.paths.dest.styles)
       )
-      // .pipe(autoprefixer())
-      .pipe(
-        gulpIf(
-          isDev,
-          gulp.dest(settings.paths.dest.styles, { sourcemaps: true }),
-          gulp.dest(settings.paths.dest.styles)
-        )
-      )
-      .pipe(gulpIf(isDev, browserSync.stream()))
-  );
+    )
+    .pipe(gulpIf(isDev, browserSync.stream()));
 }
 
 function fonts(done) {
@@ -140,11 +158,11 @@ function build(done) {
     clean,
     gulp.parallel(
       fonts,
-      html,
       vendorStyles,
       styles,
       vendorScripts,
       scripts,
+      html,
       images,
       icons
     )
