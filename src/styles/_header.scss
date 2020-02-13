@@ -24,12 +24,14 @@
 
   //   Logo
   .header__logo {
-    vertical-align: bottom;
+    .logo__img {
+      vertical-align: middle;
+    }
 
     .logo-text {
       font-weight: 700;
       font-size: 30px;
-      vertical-align: super;
+      vertical-align: middle;
 
       .first__word {
         color: #000000;
@@ -120,7 +122,7 @@
       position: absolute;
       display: block;
       top: 0;
-      width: 70px;
+      width: 60px;
       height: 49px;
       left: 100%;
       transform: translate(-100%, 0);
@@ -128,6 +130,11 @@
       border-radius: 23px;
       cursor: pointer;
       background-color: $prm-btn-color;
+      transition: width 0.25s;
+
+      &:hover {
+        width: 75px;
+      }
     }
   }
 }
