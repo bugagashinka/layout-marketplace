@@ -19,4 +19,42 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &-briefcase:before {
+    content: "\e84c";
+  }
+
+  &-cloud-download:before {
+    content: "\e865";
+  }
+
+  &-smile:before {
+    content: "\e854";
+  }
+
+  &-users:before {
+    content: "\e82b";
+  }
+
+  &-license:before {
+    content: "\e822";
+  }
+
+  &-magic-wand:before {
+    content: "\e803";
+  }
+
+  &-lock:before {
+    content: "\e80f";
+  }
+
+  &-phone:before {
+    content: "\e831";
+  }
+  &-leaf:before {
+    content: "\e849";
+  }
+  &-chart-bars:before {
+    content: "\e843";
+  }
 }

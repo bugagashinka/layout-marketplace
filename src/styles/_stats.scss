@@ -1,10 +1,3 @@
-$stats-colors: (
-  "cases": "#feb71d",
-  "sales": "#58c9e9",
-  "customers": "#77de51",
-  "members": "#ff6a6d"
-);
-
 .stats {
   background-color: #0d0f13;
   padding: 100px 0;
@@ -20,22 +13,6 @@ $stats-colors: (
   &__item {
     .lnr {
       font-size: 48px;
-
-      &-briefcase:before {
-        content: "\e84c";
-      }
-
-      &-cloud-download:before {
-        content: "\e865";
-      }
-
-      &-smile:before {
-        content: "\e854";
-      }
-
-      &-users:before {
-        content: "\e82b";
-      }
     }
 
     &-data {
@@ -51,9 +28,7 @@ $stats-colors: (
 
     @each $name, $color in $stats-colors {
       &-#{$name} {
-        // .stats__item-data {
         color: unquote($color);
-        // }
       }
     }
   }

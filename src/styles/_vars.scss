@@ -2,3 +2,21 @@ $header-color: #eef1f3;
 $text-color: #555555;
 $price-color: #0674ec;
 $prm-btn-color: #0674ec;
+
+// Stats section
+$stats-colors: (
+  "cases": "#feb71d",
+  "sales": "#58c9e9",
+  "customers": "#77de51",
+  "members": "#ff6a6d"
+);
+
+// Benefits section
+$features-colors: (
+  "license": "#0674ec",
+  "magic-wand": "#7f4ec2",
+  "lock": "#77de51",
+  "chart-bars": "#feb71d",
+  "leaf": "#58c9e9",
+  "phone": "#ff6a6d"
+);
