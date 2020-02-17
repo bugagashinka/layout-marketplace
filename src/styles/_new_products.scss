@@ -71,160 +71,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    .product__item {
-      width: 361px;
-      margin-bottom: 31px;
-      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-      border-radius: 4px;
-      background-color: #ffffff;
-      text-align: left;
-
-      a {
-        text-decoration: none;
-      }
-
-      &-head {
-        position: relative;
-
-        &:hover {
-          .item__info-btn,
-          .item__demo-btn {
-            opacity: 1;
-          }
-        }
-      }
-
-      &-img {
-        height: 230px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .product__item-buttons {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        text-align: center;
-        transform: translate(0, -50%);
-      }
-
-      .item__info-btn,
-      .item__demo-btn {
-        @include button(17px, 31px, 23px, #fff, transparent, #fff);
-        @include button-active($prm-btn-color, #fff);
-        margin: 0 5px;
-        opacity: 0;
-        transition: opacity 0.25s;
-      }
-
-      &-content {
-        padding: 30px;
-
-        .avatar {
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          vertical-align: middle;
-        }
-        .product__item-title {
-          margin: 0 0 17px;
-          font-size: 20px;
-          color: #000;
-          font-weight: 500;
-        }
-      }
-
-      &-them {
-        margin-left: 7px;
-        font-size: 15px;
-        color: #000;
-      }
-
-      &-plugin {
-        margin-left: 45px;
-        color: #7347c1;
-        font-size: 15px;
-
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 16px;
-          height: 16px;
-          margin-right: 9px;
-          vertical-align: bottom;
-          background: url(../img/new-products/icon/wordpress-icon.png)
-            center/cover no-repeat;
-        }
-      }
-
-      &-text {
-        margin-top: 32px;
-        color: #555555;
-        line-height: 30px;
-      }
-
-      &-footer {
-        display: flex;
-        align-items: center;
-        padding: 16px 30px;
-        border-top: 1px solid #ececec;
-
-        .product__item-price {
-          position: relative;
-          color: #0674ec;
-          font-weight: 500;
-
-          &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 60px;
-            height: 30px;
-            border-radius: 15px;
-            transform: translate(-25%, -20%);
-            background-color: #0674ec;
-            opacity: 0.1;
-          }
-        }
-
-        .product__item-rate {
-          display: inline-block;
-          margin-left: 15px;
-          align-self: center;
-        }
-
-        .product__item-likes {
-          margin-left: 35px;
-          font-family: "Quicksand", sans-serif;
-          font-size: 15px;
-          color: #6f7d8d;
-
-          &::before {
-            margin-right: 6px;
-            font-family: "Linearicons", sans-serif;
-            color: #7f4ec2;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 18px;
-          }
-        }
-
-        .product__item-sold {
-          font-family: "Quicksand", sans-serif;
-          margin-left: auto;
-          color: #0674ec;
-
-          &::before {
-            margin-right: 10px;
-            font-family: Linearicons;
-            font-size: 15px;
-            font-weight: 400;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -256,6 +102,80 @@
       &:hover {
         background-color: #f1f3f6;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+.product__item {
+  margin-bottom: 31px;
+  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+  &-plugin {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 9px;
+      vertical-align: bottom;
+      background: url(../img/new-products/icon/wordpress-icon.png) center/cover no-repeat;
+    }
+  }
+
+  &-footer {
+    padding: 16px 30px;
+
+    .product__item-price {
+      position: relative;
+      color: #0674ec;
+      font-weight: 500;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        border-radius: 15px;
+        transform: translate(-25%, -20%);
+        background-color: #0674ec;
+        opacity: 0.1;
+      }
+    }
+
+    .product__item-rate {
+      display: inline-block;
+      margin-left: 15px;
+      align-self: center;
+    }
+
+    .product__item-likes {
+      margin-left: 35px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 15px;
+      color: #6f7d8d;
+
+      &::before {
+        margin-right: 6px;
+        font-family: "Linearicons", sans-serif;
+        color: #7f4ec2;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    .product__item-sold {
+      font-family: "Quicksand", sans-serif;
+      margin-left: auto;
+      color: #0674ec;
+
+      &::before {
+        margin-right: 10px;
+        font-family: Linearicons;
+        font-size: 15px;
+        font-weight: 400;
       }
     }
   }

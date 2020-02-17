@@ -18,39 +18,6 @@ body {
 a {
   display: inline-block;
 }
-
-@mixin reset-link($color) {
-  text-decoration: none;
-  color: $color;
-}
-
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@mixin adaptive-img($size: cover) {
-  background-size: $size;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@mixin horizontal-list($left-margin, $text-color) {
-  @include reset-list;
-
-  li {
-    display: inline-block;
-  }
-  li + li {
-    margin-left: $left-margin;
-  }
-  li a {
-    text-decoration: none;
-    color: $text-color;
-  }
-}
-
 .container {
   max-width: 1170px;
   padding: 0 15px;
@@ -63,18 +30,11 @@ a {
   margin: 0;
 }
 
-@mixin title-holder {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 110px;
-  padding: 43px 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-  border-radius: 4px;
-  background-color: #ffffff;
+@mixin adaptive-img($size: cover) {
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 @mixin button($ver-padding, $hor-padding, $radius, $color, $bg-color, $border-color: transparent) {
   display: inline-block;
   background-color: $color;
@@ -93,4 +53,143 @@ a {
     color: $color;
     background-color: $bg-color;
   }
+}
+
+// Product card styles
+.product__card {
+  width: 361px;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+  }
+
+  // Product card header
+  &-head {
+    position: relative;
+
+    &:hover {
+      .card__info-btn,
+      .card__demo-btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-img {
+    height: 230px;
+    @include adaptive-img;
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translate(0, -50%);
+  }
+
+  .card__info-btn,
+  .card__demo-btn {
+    @include button(17px, 31px, 23px, #fff, transparent, #fff);
+    @include button-active($prm-btn-color, #fff);
+    margin: 0 5px;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  // End product card header
+
+  // Product card body
+  &-content {
+    padding: 30px;
+  }
+
+  &-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &-title {
+    margin: 0 0 17px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-them {
+    margin-left: 7px;
+    font-size: 15px;
+    color: #000;
+  }
+
+  &-plugin {
+    margin-left: 45px;
+    color: #7347c1;
+    font-size: 15px;
+  }
+
+  &-text {
+    height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 32px;
+    color: #555555;
+    line-height: 30px;
+  }
+  // End product card body
+
+  // Product card footer
+  &-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ececec;
+  }
+  // End product card footer
+}
+// End product card styles
+
+@mixin reset-link($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-list($left-margin, $text-color) {
+  @include reset-list;
+
+  li {
+    display: inline-block;
+  }
+  li + li {
+    margin-left: $left-margin;
+  }
+  li a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+@mixin title-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 110px;
+  padding: 43px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+  border-radius: 4px;
+  background-color: #ffffff;
 }
