@@ -32,7 +32,7 @@
       margin-left: auto;
     }
     .filter__menu {
-      margin-left: 25px;
+      margin-left: 10px;
     }
   }
 
@@ -78,6 +78,7 @@
       box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
       border-radius: 4px;
       background-color: #ffffff;
+      text-align: left;
 
       a {
         text-decoration: none;
@@ -127,6 +128,12 @@
           border-radius: 50%;
           vertical-align: middle;
         }
+        .product__item-title {
+          margin: 0 0 17px;
+          font-size: 20px;
+          color: #000;
+          font-weight: 500;
+        }
       }
 
       &-them {
@@ -160,8 +167,27 @@
 
       &-footer {
         display: flex;
+        align-items: center;
         padding: 16px 30px;
         border-top: 1px solid #ececec;
+
+        .product__item-price {
+          position: relative;
+          color: #0674ec;
+          font-weight: 500;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            transform: translate(-25%, -20%);
+            background-color: #0674ec;
+            opacity: 0.1;
+          }
+        }
 
         .product__item-rate {
           display: inline-block;
@@ -171,32 +197,65 @@
 
         .product__item-likes {
           margin-left: 35px;
+          font-family: "Quicksand", sans-serif;
+          font-size: 15px;
+          color: #6f7d8d;
 
           &::before {
-            content: "";
-            display: inline-block;
-            width: 20px;
-            height: 16px;
             margin-right: 6px;
-            vertical-align: bottom;
-            background: url(../img/new-products/icon/heart-icon.png)
-              center/cover no-repeat;
+            font-family: "Linearicons", sans-serif;
+            color: #7f4ec2;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18px;
           }
         }
 
         .product__item-sold {
+          font-family: "Quicksand", sans-serif;
           margin-left: auto;
+          color: #0674ec;
 
           &::before {
-            content: "";
-            display: inline-block;
-            width: 14px;
-            height: 14px;
             margin-right: 10px;
-            background: url(../img/new-products/icon/cart-icon.png) center/cover
-              no-repeat;
+            font-family: Linearicons;
+            font-size: 15px;
+            font-weight: 400;
           }
         }
+      }
+    }
+  }
+}
+
+.filter__menu {
+  padding: 0 10px;
+  position: relative;
+
+  &:hover > .filter__list,
+  .filter__list:hover {
+    display: block;
+  }
+
+  .filter__list {
+    display: none;
+    position: absolute;
+    @include reset-list;
+    border: 1px solid #747b86;
+    transform: translate(-100%, 0);
+    background-color: #fff;
+    z-index: 5;
+
+    .filter__item {
+      min-width: 115px;
+      padding: 12px 0px;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      &:active,
+      &:hover {
+        background-color: #f1f3f6;
+        cursor: pointer;
       }
     }
   }

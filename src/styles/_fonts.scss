@@ -60,4 +60,37 @@
   &-bubble:before {
     content: "\e83f";
   }
+  &-heart:before {
+    content: "\e813";
+  }
+  &-cart:before {
+    content: "\e82e";
+  }
+  &-clock:before {
+    content: "\e864";
+  }
+  &-eye:before {
+    content: "\e81b";
+  }
+  &-magnifier:before {
+    content: "\e86f";
+  }
+  &-alarm:before {
+    content: "\e858";
+  }
+  &-envelope:before {
+    content: "\e818";
+  }
+  &-chevron-left:before {
+    content: "\e875";
+  }
+  &-chevron-right:before {
+    content: "\e876";
+  }
+  &-arrow-up:before {
+    content: "\e877";
+  }
+  &-arrow-down:before {
+    content: "\e878";
+  }
 }

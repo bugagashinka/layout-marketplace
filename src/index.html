@@ -189,6 +189,38 @@
                 </g>
               </g>
             </svg>
+            <ul class="filter__list">
+              <li>
+                <button class="filter__item type="button" data-sort="rate:asc">
+                  Rate <span class="lnr lnr-arrow-up"></span>
+                </button>
+              </li>
+              <li>
+                <button class="filter__item type="button" data-sort="rate:desc">
+                  Rate <span class="lnr lnr-arrow-down"></span>
+                </button>
+              </li>
+              <li>
+                <button class="filter__item type="button" data-sort="price:asc">
+                  Price <span class="lnr lnr-arrow-up"></span>
+                </button>
+              </li>
+              <li>
+                <button class="filter__item type="button" data-sort="price:desc">
+                  Price <span class="lnr lnr-arrow-down"></span>
+                </button>
+              </li>
+              <li>
+                <button class="filter__item type="button" data-sort="sold:asc">
+                  Sold <span class="lnr lnr-arrow-up"></span>
+                </button>
+              </li>
+              <li>
+                <button class="filter__item type="button" data-sort="sold:desc">
+                  Sold <span class="lnr lnr-arrow-down"></span>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="categories">
@@ -212,7 +244,7 @@
           <button data-filter=".category-" type="button">Software</button>
         </div>
         <div class="new-products__list">
-          <div class="product__item mix category-plugins">
+          <div class="product__item mix category-plugins" data-price="20" data-rate="90" data-sold="246">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -237,12 +269,12 @@
             </div>
             <div class="product__item-footer">
               <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <a href="#" class="product__item-likes lnr lnr-heart">90</a>
               <span class="product__item-rate"></span>
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">246</a>
             </div>
           </div>
-          <div class="product__item mix category-wordpress">
+          <div class="product__item mix category-wordpress" data-price="19" data-rate="55" data-sold="300">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -266,14 +298,13 @@
               </div>
             </div>
             <div class="product__item-footer">
-              <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <div class="product__item-price">$19</div>
+              <a href="#" class="product__item-likes lnr lnr-heart">55</a>
               <span class="product__item-rate"></span>
-
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">300</a>
             </div>
           </div>
-          <div class="product__item mix category-template">
+          <div class="product__item mix category-template" data-price="24" data-rate="73" data-sold="199">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -297,13 +328,13 @@
               </div>
             </div>
             <div class="product__item-footer">
-              <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <div class="product__item-price">$24</div>
+              <a href="#" class="product__item-likes lnr lnr-heart">73</a>
               <span class="product__item-rate"></span>
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">199</a>
             </div>
           </div>
-          <div class="product__item mix category-template">
+          <div class="product__item mix category-template" data-price="15" data-rate="99" data-sold="134">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -327,13 +358,13 @@
               </div>
             </div>
             <div class="product__item-footer">
-              <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <div class="product__item-price">$15</div>
+              <a href="#" class="product__item-likes lnr lnr-heart">99</a>
               <span class="product__item-rate"></span>
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">134</a>
             </div>
           </div>
-          <div class="product__item mix category-psd">
+          <div class="product__item mix category-psd" data-price="17" data-rate="82" data-sold="253">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -357,13 +388,13 @@
               </div>
             </div>
             <div class="product__item-footer">
-              <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <div class="product__item-price">$17</div>
+              <a href="#" class="product__item-likes lnr lnr-heart">82</a>
               <span class="product__item-rate"></span>
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">253</a>
             </div>
           </div>
-          <div class="product__item mix category-psd">
+          <div class="product__item mix category-psd" data-price="12" data-rate="122" data-sold="179">
             <div class="product__item-head">
               <div
                 class="product__item-img"
@@ -387,14 +418,16 @@
               </div>
             </div>
             <div class="product__item-footer">
-              <div class="product__item-price">$20</div>
-              <a href="#" class="product__item-likes">90</a>
+              <div class="product__item-price">$12</div>
+              <a href="#" class="product__item-likes lnr lnr-heart">122</a>
               <span class="product__item-rate"></span>
-              <a href="#" class="product__item-sold">246</a>
+              <a href="#" class="product__item-sold lnr lnr-cart">179</a>
             </div>
           </div>
         </div>
-        <a href="" class="new-products__btn">All New Products</a>
+        <button type="button" class="new-products__btn" data-filter="all">
+          All New Products
+        </button>
       </div>
     </section>
     <!-- End New-products section -->
