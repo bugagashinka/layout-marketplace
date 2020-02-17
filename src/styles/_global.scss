@@ -19,10 +19,21 @@ a {
   display: inline-block;
 }
 
+@mixin reset-link($color) {
+  text-decoration: none;
+  color: $color;
+}
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@mixin adaptive-img($size: cover) {
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @mixin horizontal-list($left-margin, $text-color) {
@@ -64,14 +75,7 @@ a {
   background-color: #ffffff;
 }
 
-@mixin button(
-  $ver-padding,
-  $hor-padding,
-  $radius,
-  $color,
-  $bg-color,
-  $border-color: transparent
-) {
+@mixin button($ver-padding, $hor-padding, $radius, $color, $bg-color, $border-color: transparent) {
   display: inline-block;
   background-color: $color;
   border: 1px solid $border-color;
