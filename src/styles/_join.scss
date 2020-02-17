@@ -1,0 +1,23 @@
+.join {
+  min-height: 400px;
+  padding: 110px 0;
+  background-color: #151a20;
+  background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
+  opacity: 0.9;
+  text-align: center;
+
+  &__title {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 23px;
+  }
+  &__text {
+    color: #e7e7e7;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  &__btn {
+    @include button(20px, 42px, 28px, $prm-btn-color, #fff);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
