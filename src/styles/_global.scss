@@ -30,6 +30,26 @@ a {
   margin: 0;
 }
 
+//   Logo
+.logo {
+  &__img {
+    vertical-align: middle;
+  }
+
+  &-text {
+    font-weight: 700;
+    font-size: 30px;
+    vertical-align: middle;
+
+    .first__word {
+      color: #000000;
+    }
+    .second__word {
+      color: $prm-btn-color;
+    }
+  }
+}
+
 @mixin adaptive-img($size: cover) {
   background-size: $size;
   background-position: center;

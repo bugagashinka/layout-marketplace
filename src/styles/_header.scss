@@ -22,26 +22,6 @@
   align-items: center;
   height: 100px;
 
-  //   Logo
-  .header__logo {
-    .logo__img {
-      vertical-align: middle;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 30px;
-      vertical-align: middle;
-
-      .first__word {
-        color: #000000;
-      }
-      .second__word {
-        color: $prm-btn-color;
-      }
-    }
-  }
-
   //   Header panel
   .header__panel {
     display: flex;
