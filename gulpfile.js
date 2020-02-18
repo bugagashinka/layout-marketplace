@@ -10,6 +10,7 @@ const cssmin = require("gulp-cssmin");
 const wait = require("gulp-wait");
 const changed = require("gulp-changed");
 const del = require("del");
+const ghPages = require("gh-pages");
 const removeHtmlComments = require("gulp-remove-html-comments");
 
 const isDev = process.env.NODE_ENV === "development";
@@ -141,10 +142,15 @@ function watch(done) {
   done();
 }
 
+function deploy(done) {
+  ghPages.publish(settings.paths.dest.root, done);
+}
+
 function build(done) {
   return gulp.series(
     clean,
-    gulp.parallel(fonts, vendorStyles, styles, vendorScripts, scripts, html, images, icons)
+    gulp.parallel(fonts, vendorStyles, styles, vendorScripts, scripts, html, images, icons),
+    deploy
   )(done);
 }
 
