@@ -1,0 +1,157 @@
+.footer {
+  &__logo {
+    margin-bottom: 34px;
+    .first__word {
+      color: #fff;
+    }
+  }
+
+  a:active,
+  a:hover {
+    color: #fff;
+  }
+
+  &__top {
+    padding: 115px 0 119px;
+    background-color: $footer-top-bc;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    max-width: 275px;
+    width: 100%;
+    color: #ababab;
+    font-size: 15px;
+
+    .footer__text {
+      margin-bottom: 32px;
+      line-height: 28px;
+    }
+
+    a {
+      @include reset-link(#ababab);
+    }
+  }
+
+  &__title {
+    margin: 20px 0 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+  }
+
+  &__links {
+    max-width: 185px;
+
+    .footer__list {
+      @include reset-list;
+
+      li {
+        line-height: 40px;
+      }
+    }
+  }
+  &__info {
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 22px;
+    font-family: "Quicksand", sans-serif;
+    line-height: 26px;
+  }
+
+  &__phone,
+  &__mail,
+  &__address {
+    &::before {
+      position: absolute;
+      left: -30px;
+      color: #fff;
+      font-family: "Linearicons";
+    }
+  }
+
+  &__social {
+    max-width: 360px;
+    &-links {
+      @include horizontal-list(13px, transparent);
+
+      a {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: #395799;
+        background-image: url(../img/footer/social_links_sprite.png);
+      }
+      .link__facebook {
+        background-position: -1px -1px;
+      }
+      .link__twitter {
+        background-position: -45px -1px;
+      }
+      .link__googleplus {
+        background-position: -1px -45px;
+      }
+      .link__pinterest {
+        background-position: -45px -45px;
+      }
+      .link__linkedin {
+        background-position: -89px -1px;
+      }
+      .link__ball {
+        background-position: -89px -45px;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 48px;
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 20px 115px 20px 30px;
+      border-radius: 25px;
+      color: #000;
+      background-color: #fff;
+      border: none;
+
+      &::placeholder {
+        color: #ababab;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 28px;
+      }
+    }
+    button {
+      position: absolute;
+      right: -2px;
+      width: 110px;
+      height: 50px;
+      border-radius: 25px;
+      border: none;
+      color: #fff;
+
+      background-color: #0674ec;
+      cursor: pointer;
+    }
+  }
+
+  &__copy {
+    padding: 40px 0;
+    text-align: center;
+    background-color: $footer-copy-bc;
+    color: #999;
+    font-size: 15px;
+
+    a {
+      @include reset-link(#fff);
+    }
+  }
+}
