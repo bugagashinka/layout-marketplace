@@ -1,0 +1,104 @@
+.followers {
+  padding: 120px 0;
+  background-color: #eff1f5;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+    height: 45px;
+    border-radius: 23px;
+    background-color: #0674ec;
+  }
+
+  &__holder {
+    @include title-holder;
+    margin-bottom: 51px;
+  }
+  &__title {
+    margin: 0;
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  &__item {
+    &-footer {
+      padding: 16px 30px;
+    }
+
+    &-price {
+      position: relative;
+      color: #0674ec;
+      font-weight: 500;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        border-radius: 15px;
+        transform: translate(-25%, -20%);
+        background-color: #0674ec;
+        opacity: 0.1;
+      }
+    }
+
+    &-rate {
+      display: inline-block;
+      margin-left: 15px;
+      align-self: center;
+    }
+
+    &-likes {
+      margin-left: 35px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 15px;
+      color: #6f7d8d;
+
+      &::before {
+        margin-right: 6px;
+        font-family: "Linearicons", sans-serif;
+        color: #7f4ec2;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    &-sold {
+      font-family: "Quicksand", sans-serif;
+      margin-left: auto;
+      color: #0674ec;
+
+      &::before {
+        margin-right: 10px;
+        font-family: Linearicons;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+  // Customize slick slider
+  &__slide {
+    margin: 0 14px;
+  }
+  &__slide-list {
+    margin: 0 -14px;
+  }
+  .slick-slide .followers__item-avatar {
+    display: inline-block;
+    margin-right: 9px;
+  }
+  .slick-arrow {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+  }
+}
