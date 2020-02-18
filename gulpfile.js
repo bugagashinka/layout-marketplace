@@ -10,6 +10,7 @@ const cssmin = require("gulp-cssmin");
 const wait = require("gulp-wait");
 const changed = require("gulp-changed");
 const del = require("del");
+const removeHtmlComments = require("gulp-remove-html-comments");
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -118,7 +119,10 @@ function icons(done) {
 }
 
 function html() {
-  return gulp.src(`${settings.paths.src.root}*.html`).pipe(gulp.dest(settings.paths.dest.root));
+  return gulp
+    .src(`${settings.paths.src.root}*.html`)
+    .pipe(removeHtmlComments())
+    .pipe(gulp.dest(settings.paths.dest.root));
 }
 
 function server(done) {
