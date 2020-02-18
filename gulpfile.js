@@ -49,7 +49,8 @@ const settings = {
     scripts: [
       "./node_modules/jquery/dist/jquery.js",
       "./node_modules/mixitup/dist/mixitup.js",
-      "./node_modules/rateyo/src/jquery.rateyo.js"
+      "./node_modules/rateyo/src/jquery.rateyo.js",
+      "./node_modules/slick-carousel/slick/slick.js"
     ]
   }
 };
@@ -72,13 +73,7 @@ function scripts() {
     .src(`${settings.paths.src.scripts}**/*.js`, { sourcemaps: true })
     .pipe(concat("main.min.js"))
     .pipe(uglify())
-    .pipe(
-      gulpIf(
-        isDev,
-        gulp.dest(destPath, { sourcemaps: true }),
-        gulp.dest(destPath)
-      )
-    );
+    .pipe(gulpIf(isDev, gulp.dest(destPath, { sourcemaps: true }), gulp.dest(destPath)));
 }
 
 function vendorStyles() {
@@ -102,11 +97,7 @@ function styles() {
     )
     .pipe(autoprefixer())
     .pipe(
-      gulpIf(
-        isDev,
-        gulp.dest(settings.paths.dest.styles, { sourcemaps: true }),
-        gulp.dest(settings.paths.dest.styles)
-      )
+      gulpIf(isDev, gulp.dest(settings.paths.dest.styles, { sourcemaps: true }), gulp.dest(settings.paths.dest.styles))
     )
     .pipe(gulpIf(isDev, browserSync.stream()));
 }
@@ -119,9 +110,7 @@ function fonts() {
 }
 
 function images() {
-  return gulp
-    .src(`${settings.paths.src.images.all}**/*`)
-    .pipe(gulp.dest(settings.paths.dest.images.all));
+  return gulp.src(`${settings.paths.src.images.all}**/*`).pipe(gulp.dest(settings.paths.dest.images.all));
 }
 
 function icons(done) {
@@ -129,9 +118,7 @@ function icons(done) {
 }
 
 function html() {
-  return gulp
-    .src(`${settings.paths.src.root}*.html`)
-    .pipe(gulp.dest(settings.paths.dest.root));
+  return gulp.src(`${settings.paths.src.root}*.html`).pipe(gulp.dest(settings.paths.dest.root));
 }
 
 function server(done) {
@@ -143,34 +130,17 @@ function server(done) {
 }
 
 function watch(done) {
-  gulp
-    .watch(`${settings.paths.src.root}*.html`)
-    .on("all", gulp.series(html, browserSync.reload));
-  gulp
-    .watch(`${settings.paths.src.scripts}*.js`)
-    .on("all", gulp.series(scripts, browserSync.reload));
-  gulp
-    .watch(`${settings.paths.src.styles}**/*.scss`)
-    .on("all", gulp.series(styles, browserSync.reload));
-  gulp
-    .watch(`${settings.paths.src.images.all}**/*`)
-    .on("all", gulp.series(images, browserSync.reload));
+  gulp.watch(`${settings.paths.src.root}*.html`).on("all", gulp.series(html, browserSync.reload));
+  gulp.watch(`${settings.paths.src.scripts}*.js`).on("all", gulp.series(scripts, browserSync.reload));
+  gulp.watch(`${settings.paths.src.styles}**/*.scss`).on("all", gulp.series(styles, browserSync.reload));
+  gulp.watch(`${settings.paths.src.images.all}**/*`).on("all", gulp.series(images, browserSync.reload));
   done();
 }
 
 function build(done) {
   return gulp.series(
     clean,
-    gulp.parallel(
-      fonts,
-      vendorStyles,
-      styles,
-      vendorScripts,
-      scripts,
-      html,
-      images,
-      icons
-    )
+    gulp.parallel(fonts, vendorStyles, styles, vendorScripts, scripts, html, images, icons)
   )(done);
 }
 
