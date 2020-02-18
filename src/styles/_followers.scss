@@ -29,21 +29,14 @@
     }
 
     &-price {
-      position: relative;
-      color: #0674ec;
+      width: 60px;
+      height: 30px;
+      border-radius: 15px;
       font-weight: 500;
-
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 60px;
-        height: 30px;
-        border-radius: 15px;
-        transform: translate(-25%, -20%);
-        background-color: #0674ec;
-        opacity: 0.1;
-      }
+      color: #0674ec;
+      line-height: 30px;
+      background-color: #e7f1fd;
+      text-align: center;
     }
 
     &-rate {
