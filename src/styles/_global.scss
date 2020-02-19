@@ -231,3 +231,31 @@ a {
   border-radius: 4px;
   background-color: #ffffff;
 }
+
+.breadcrumbs {
+  text-align: center;
+  @include horizontal-list(25px, #fff);
+
+  a {
+    &:hover:not(.active) {
+      text-decoration: underline;
+    }
+  }
+  span.active,
+  a.active {
+    color: #bfcad7;
+  }
+
+  &__list {
+    li {
+      position: relative;
+
+      & + li:before {
+        position: absolute;
+        content: "/";
+        left: -18px;
+        color: #fff;
+      }
+    }
+  }
+}
