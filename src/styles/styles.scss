@@ -1,17 +1,22 @@
+// General styles
 @import "vars";
 @import "global";
 @import "fonts";
 @import "header";
-@import "promo";
-@import "products";
-@import "weekly";
-@import "new_products";
-@import "followers";
-@import "stats";
-@import "benefits";
-@import "feedbacks";
-@import "proposals";
-@import "news";
-@import "protect";
 @import "join";
 @import "footer";
+
+// Home page styles
+@import "./home-page/promo";
+@import "./home-page/products";
+@import "./home-page/weekly";
+@import "./home-page/new_products";
+@import "./home-page/followers";
+@import "./home-page/stats";
+@import "./home-page/benefits";
+@import "./home-page/feedbacks";
+@import "./home-page/proposals";
+@import "./home-page/news";
+@import "./home-page/protect";
+
+// Category page styles
