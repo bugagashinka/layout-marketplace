@@ -1,0 +1,18 @@
+.breadcrumbs {
+  padding: 58px 0px 68px;
+  background-image: linear-gradient(to left, #0d3ef2 0%, #4c1f9c 100%);
+  background-color: #6c6c6c;
+  text-align: left;
+
+  &__title {
+    color: #fff;
+    font-family: Quicksand;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin-bottom: 26px;
+  }
+}
