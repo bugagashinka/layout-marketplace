@@ -1,0 +1,56 @@
+.recover-page {
+  padding: 0px 0px 121px;
+  background-color: #eff1f5;
+
+  .breadcrumbs {
+    margin-bottom: 72px;
+  }
+}
+
+.recover__form {
+  width: 555px;
+  margin: 0 auto;
+  padding: 60px 49px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+  &-head {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e8ebf0;
+  }
+
+  &-tip {
+    color: #555;
+    line-height: 30px;
+  }
+
+  label {
+    display: block;
+    margin: 0;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 17px 21px;
+    margin-bottom: 32px;
+    border: none;
+    background-color: #f4f5f8;
+
+    &::placeholder {
+      color: #898f96;
+    }
+  }
+
+  button {
+    @include button(19px, 52px, 25px, #fff, $prm-btn-color);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  }
+}
