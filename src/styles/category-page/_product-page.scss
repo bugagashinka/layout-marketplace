@@ -207,3 +207,9 @@ $product-page-bg: #eff1f5;
     }
   }
 }
+// Pagination styles {
+.pagination {
+  padding-bottom: 120px;
+  background-color: $product-page-bg;
+  text-align: right;
+}

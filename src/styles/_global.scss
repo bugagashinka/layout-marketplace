@@ -260,3 +260,51 @@ a {
     }
   }
 }
+
+// Pagination styles
+.pagination {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+    margin-left: auto;
+  }
+  a {
+    width: 50px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    text-decoration: none;
+  }
+  .pagination__arrow {
+    font-family: "Linearicons";
+    color: #fff;
+    background-color: #7347c1;
+
+    &-left::before {
+      content: "\e879";
+    }
+    &-right::before {
+      content: "\e87a";
+    }
+  }
+  span.pagination__arrow_disabled,
+  a.pagination__arrow_disabled {
+    color: #000;
+    background-color: #fff;
+  }
+
+  &__list {
+    @include horizontal-list(5px, #747b86);
+
+    span.active,
+    a.active {
+      color: #fff;
+      background-color: $prm-btn-color;
+    }
+  }
+}
