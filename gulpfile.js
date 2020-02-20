@@ -46,13 +46,15 @@ const settings = {
       "./node_modules/normalize.css/normalize.css",
       "./node_modules/magnific-popup/dist/magnific-popup.css",
       "./node_modules/slick-carousel/slick/slick.css",
-      "./node_modules/rateyo/src/jquery.rateyo.css"
+      "./node_modules/rateyo/src/jquery.rateyo.css",
+      "./node_modules/ion-rangeslider/css/ion.rangeSlider.css"
     ],
     scripts: [
       "./node_modules/jquery/dist/jquery.js",
       "./node_modules/mixitup/dist/mixitup.js",
       "./node_modules/rateyo/src/jquery.rateyo.js",
-      "./node_modules/slick-carousel/slick/slick.js"
+      "./node_modules/slick-carousel/slick/slick.js",
+      "./node_modules/ion-rangeslider/js/ion.rangeSlider.js"
     ]
   }
 };
@@ -89,7 +91,7 @@ function vendorStyles() {
 function styles() {
   return gulp
     .src(`${settings.paths.src.styles}styles.scss`, { sorcmaps: true })
-    .pipe(wait(200))
+    .pipe(wait(500))
     .pipe(sass({ outputStyle: "compressed" }))
     .on("error", sass.logError)
     .pipe(
