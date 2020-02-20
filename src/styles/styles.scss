@@ -5,6 +5,7 @@
 @import "header";
 @import "join";
 @import "footer";
+@import "breadcrumbs-section";
 
 // Home page styles
 @import "./home-page/promo";
@@ -24,7 +25,6 @@
 @import "./category-page/product-page";
 
 // Terms & Conditions page styles
-@import "./terms-conditions/breadcrumbs";
 @import "./terms-conditions/conditions";
 
 // How it works page styles
@@ -32,7 +32,6 @@
 @import "./how-works-page/content";
 
 // Pricing plan page
-@import "./price-plan-page/breadcrumbs";
 @import "./price-plan-page/content";
 
 // 404 page styles
