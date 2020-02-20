@@ -141,17 +141,11 @@ $product-page-bg: #eff1f5;
       text-align: center;
 
       button {
-        width: 170px;
-        height: 44px;
+        @include button(15px, 32px, 22px, #fff, $prm-btn-color);
         margin-top: 88px;
-        border-radius: 22px;
-        border: none;
         font-size: 15px;
         font-weight: 500;
-        color: #fff;
-        background-color: #0674ec;
         box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
       }
     }
   }
