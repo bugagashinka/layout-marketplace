@@ -404,14 +404,18 @@
 
         
         <section class="pagination">
-          <ul class="pagination__list">
-            <li><a class="pagination__arrow-left" href="#"></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">8</a></li>
-            <li><a class="pagination__arrow-right" href="#"></a></li>
-          </ul>
+          <div class="container">
+            <div class="pagination__inner">
+              <a class="pagination__arrow pagination__arrow-left pagination__arrow_disabled" href="#"></a>
+              <ul class="pagination__list">
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">8</a></li>
+              </ul>
+              <a class="pagination__arrow pagination__arrow-right" href="#"></a>
+            </div>
+          </div>
         </section>
         
 
