@@ -1,0 +1,27 @@
+.conditions {
+  padding: 63px 0px 120px;
+  color: #555555;
+  background-color: #eff1f5;
+
+  &__content {
+    padding: 15px 40px 70px 30px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  &__point {
+    .conditions__title {
+      margin: 30px 0px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e8ebf0;
+      color: #000;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
