@@ -1,0 +1,30 @@
+.how-works-page {
+  .breadcrumbs {
+    padding: 90px 0px 30px;
+    text-align: center;
+    background-color: #441c7c;
+    background-image: linear-gradient(to left, #0d3ef2 0%, #4c1f9c 100%);
+    opacity: 0.9;
+
+    &__list {
+      padding-left: 0;
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 22px;
+      color: #f3f3f8;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 50px;
+    }
+    &__subtitle {
+      margin: 0;
+      margin-bottom: 75px;
+      font-size: 30px;
+      color: #bfcad7;
+
+      font-weight: 300;
+    }
+  }
+}

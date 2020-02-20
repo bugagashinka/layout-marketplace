@@ -232,6 +232,14 @@ a {
   background-color: #ffffff;
 }
 
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 // Bread crumbs styles
 .breadcrumbs {
   text-align: center;
