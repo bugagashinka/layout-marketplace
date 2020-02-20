@@ -1,0 +1,115 @@
+.price-plan {
+  &__content {
+    padding: 120px 0px;
+    background-color: #eff1f5;
+    text-align: center;
+  }
+
+  &__title {
+    margin-right: 0;
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 28px;
+
+    span {
+      color: #0674ec;
+    }
+  }
+  &__subtitle {
+    max-width: 672px;
+    margin: 0 auto 70px;
+    color: #555;
+    line-height: 30px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 360px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+    &-title {
+      margin: 0;
+      margin-bottom: 29px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e8ebf0;
+      color: #000;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &-price {
+      color: #000;
+      font-size: 36px;
+      margin-bottom: 48px;
+      line-height: 32px;
+
+      .price__currency {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+      .price__period {
+        color: #555;
+        font-size: 16px;
+      }
+    }
+
+    &-btn {
+      @include button(14px, 18px, 4px, #fff, $prm-btn-color);
+      width: 100%;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &:first-child {
+      .price-plan__item-btn {
+        background-color: #ff6a6c;
+      }
+    }
+    &:last-child {
+      .price-plan__item-btn {
+        background-color: #feb71d;
+      }
+    }
+  }
+  &__list {
+    text-align-last: left;
+    @include reset-list;
+    margin-bottom: 40px;
+
+    li {
+      position: relative;
+      padding: 10px;
+      padding-left: 23px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        transform: translate(0, -50%);
+        margin: 10px 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #c5cad4;
+      }
+
+      .lnr-question-circle {
+        position: relative;
+        margin-left: 9px;
+        color: #555;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+}
