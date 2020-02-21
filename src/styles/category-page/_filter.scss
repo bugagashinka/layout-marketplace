@@ -1,0 +1,57 @@
+.category-page {
+  .filter {
+    position: relative;
+    z-index: 2;
+    padding: 43px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nav {
+      @include horizontal-list(40px, #0674ec);
+
+      span.active,
+      a.active {
+        color: #555;
+      }
+    }
+
+    &__control {
+      select {
+        width: 220px;
+        padding: 15px 20px;
+        margin-right: 29px;
+        border-radius: 3px;
+        border: 1px solid #eceff2;
+        vertical-align: bottom;
+      }
+    }
+
+    &__view {
+      display: inline-block;
+
+      padding: 12px 12px;
+      border-radius: 3px;
+      border: 1px solid #eceff2;
+
+      button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      button:active,
+      button.active {
+        path {
+          fill: #0674ec;
+        }
+      }
+    }
+  }
+}

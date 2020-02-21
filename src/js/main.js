@@ -30,10 +30,10 @@ $(function() {
   function createSlider(container, config) {
     $(container).slick(Object.assign(generalSlickConfig, config));
   }
-  // Weekly section
+  // Weekly section | Home page
   createSlider(".weekly__slide-list", { appendArrows: ".weekly__buttons" });
 
-  // Followers section
+  // Followers section | Home page
   createSlider(".followers__slide-list", {
     appendArrows: ".followers__buttons",
     autoplay: false,
@@ -41,7 +41,7 @@ $(function() {
     slidesToScroll: 3
   });
 
-  // Aside price slider
+  // Aside price slider | Category page
   $(".aside__price-slider").ionRangeSlider({
     skin: "round",
     type: "double",
@@ -49,5 +49,15 @@ $(function() {
     max: 350,
     from: 30,
     to: 300
+  });
+
+  $(".filter__view-grid").on("click", function() {
+    $(this).addClass("active");
+    $(".filter__view-list").removeClass("active");
+  });
+
+  $(".filter__view-list").on("click", function() {
+    $(this).addClass("active");
+    $(".filter__view-grid").removeClass("active");
   });
 });
