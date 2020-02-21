@@ -1,0 +1,94 @@
+.signin-page {
+  background-color: #eff1f5;
+
+  padding-bottom: 120px;
+  .breadcrumbs {
+    margin-bottom: 73px;
+  }
+}
+
+.signin__form {
+  color: #000;
+
+  &-head {
+    margin-bottom: 30px;
+  }
+  &-title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  &-tip {
+    max-width: 265px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #555;
+    line-height: 28px;
+  }
+  label {
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  &-recover,
+  &-signup {
+    display: inline-block;
+    color: #898f96;
+    a {
+      @include reset-link(#0674ec);
+    }
+  }
+  &-signup {
+    float: right;
+  }
+
+  &-remember {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .remember__checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #0674ec;
+    }
+
+    &:hover .remember__checkbox {
+      background-color: #1161b8;
+    }
+
+    input:checked ~ .remember__checkbox {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 25%;
+        left: 0px;
+        right: 0;
+        display: block;
+        width: 10px;
+        height: 6px;
+        border: 2px solid #fff;
+        margin: auto;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  button {
+    margin: 35px 0 40px;
+  }
+}
