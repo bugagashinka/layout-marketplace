@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper signin-page">
       
       <header class="header">
         <div class="header__top">
@@ -63,7 +63,7 @@
       </header>
       
 
-      <main class="content signin-page">
+      <main class="content">
         
         <section class="breadcrumbs">
           <div class="container">
@@ -78,64 +78,43 @@
 
         
         <section class="common__form signin__form">
-          <div class="container">
-            <div class="common__form-head account__form-head">
-              <div class="common__form-title account__form-title">Create Your Account</div>
-              <div class="common__form-tip account__form-tip">
-                Please fill the following fields with appropriate information to register a new MartPlace account.
-              </div>
+          
+          <div class="common__form-head signin__form-head">
+            <div class="common__form-title signin__form-title">Welcome Back</div>
+            <div class="common__form-tip signin__form-tip">
+              You can sign in with your username
             </div>
-            <form action="">
-              <label for="name">Your Name</label>
-              <input
-                id="name"
-                type="name"
-                name="text"
-                minlength="3"
-                placeholder="Enter your name..."
-                autofocus
-                required
-              />
-              <label for="email">Email Address</label>
-              <input
-                id="email"
-                type="email"
-                name="password"
-                minlength="3"
-                placeholder="Enter your email address"
-                required
-              />
-              <label for="username">Username</label>
-              <input
-                id="username"
-                type="text"
-                name="username"
-                minlength="3"
-                placeholder="Enter your username..."
-                required
-              />
-              <label for="password">Password</label>
-              <input
-                id="password"
-                type="password"
-                name="password"
-                minlength="3"
-                placeholder="Enter your password..."
-                required
-              />
-              <label for="confirm_password">Confirm Password</label>
-              <input
-                id="confirm_password"
-                type="password"
-                name="confirm_password"
-                minlength="3"
-                placeholder="Enter your password..."
-                required
-              />
-              <button type="submit">Register Now</button>
-              <div class="account__form-login">Already have an account? <a href="#">Login</a></div>
-            </form>
           </div>
+          <form action="">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              minlength="3"
+              placeholder="Enter your username..."
+              required
+            />
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              minlength="3"
+              placeholder="Enter your password..."
+              required
+            />
+            <label class="signin__form-remember"
+              >Remember me
+              <input type="checkbox" name="remember" />
+              <span class="remember__checkbox"></span>
+            </label>
+
+            <button type="submit">Register Now</button>
+            <div class="signin__form-recover">Lost your <a href="#">username</a> or <a href="#">password</a>?</div>
+            <div class="signin__form-signup">Don't have an <a href="#">account</a>?</div>
+          </form>
+          
         </section>
         
       </main>

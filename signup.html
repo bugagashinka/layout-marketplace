@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper signup-page">
       
       <header class="header">
         <div class="header__top">
@@ -63,7 +63,7 @@
       </header>
       
 
-      <main class="content signup-page">
+      <main class="content">
         
         <section class="breadcrumbs">
           <div class="container">
@@ -78,64 +78,55 @@
 
         
         <section class="common__form signup__form">
-          <div class="container">
-            <div class="common__form-head signup__form-head">
-              <div class="common__form-title signup__form-title">Create Your Account</div>
-              <div class="common__form-tip signup__form-tip">
-                Please fill the following fields with appropriate information to register a new MartPlace account.
-              </div>
+          <div class="common__form-head signup__form-head">
+            <div class="common__form-title signup__form-title">Create Your Account</div>
+            <div class="common__form-tip signup__form-tip">
+              Please fill the following fields with appropriate information to register a new MartPlace account.
             </div>
-            <form action="">
-              <label for="name">Your Name</label>
-              <input
-                id="name"
-                type="name"
-                name="text"
-                minlength="3"
-                placeholder="Enter your name..."
-                autofocus
-                required
-              />
-              <label for="email">Email Address</label>
-              <input
-                id="email"
-                type="email"
-                name="password"
-                minlength="3"
-                placeholder="Enter your email address"
-                required
-              />
-              <label for="username">Username</label>
-              <input
-                id="username"
-                type="text"
-                name="username"
-                minlength="3"
-                placeholder="Enter your username..."
-                required
-              />
-              <label for="password">Password</label>
-              <input
-                id="password"
-                type="password"
-                name="password"
-                minlength="3"
-                placeholder="Enter your password..."
-                required
-              />
-              <label for="confirm_password">Confirm Password</label>
-              <input
-                id="confirm_password"
-                type="password"
-                name="confirm_password"
-                minlength="3"
-                placeholder="Enter your password..."
-                required
-              />
-              <button type="submit">Register Now</button>
-              <div class="signup__form-login">Already have an account? <a href="#">Login</a></div>
-            </form>
           </div>
+          <form action="">
+            <label for="name">Your Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              minlength="3"
+              placeholder="Enter your name..."
+              autofocus
+              required
+            />
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" minlength="3" placeholder="Enter your email address" required />
+            <label for="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              minlength="3"
+              placeholder="Enter your username..."
+              required
+            />
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              minlength="3"
+              placeholder="Enter your password..."
+              required
+            />
+            <label for="confirm_password">Confirm Password</label>
+            <input
+              id="confirm_password"
+              type="password"
+              name="confirm_password"
+              minlength="3"
+              placeholder="Enter your password..."
+              required
+            />
+            <button type="submit">Register Now</button>
+            <div class="signup__form-login">Already have an account? <a href="#">Login</a></div>
+          </form>
         </section>
         
       </main>

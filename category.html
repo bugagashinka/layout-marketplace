@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper category-page">
       
       <header class="header">
         <div class="header__top">
@@ -81,10 +81,43 @@
         
 
         
-        <section class="product-page">
+        <section class="filter">
           <div class="container">
-            <div class="product-page__inner">
-              <aside class="product-page__aside">
+            <div class="filter__inner">
+              <ul class="filter__nav">
+                <li><a href="#">New Products</a></li>
+                <li><a href="#">Popular Products</a></li>
+              </ul>
+              <div class="filter__control">
+                <select class="filter__order" name="" id="">
+                  <option value="">Price : Low to High</option>
+                  <option value="">Price : High to Low</option>
+                  <option value="">Rate : Low to High</option>
+                  <option value="">Rate : High to Low</option>
+                  <option value="">Sold : Low to High</option>
+                  <option value="">Sold : High to Low</option>
+                </select>
+                <select class="filter__count" name="" id="">
+                  <option value="count_12">12 Items Per Page</option>
+                  <option value="count_12">24 Items Per Page</option>
+                  <option value="count_58">58 Items Per Page</option>
+                  <option value="count_118">118 Items Per Page</option>
+                </select>
+                <div class="filter__view">
+                  <a class="" href="#"><img src="./img/category/icon/grid-icon.png" alt=""/></a>
+                  <a class="" href="#"><img src="./img/category/icon/list-icon.png" alt=""/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        
+        <section class="product">
+          <div class="container">
+            <div class="product__inner">
+              <aside class="product__aside">
                 <div class="aside__item aside__category">
                   <div class="aside__item-title lnr lnr-chevron-down">Categories</div>
                   <ul class="aside__item-list category__list">
@@ -117,8 +150,8 @@
                   </form>
                 </div>
               </aside>
-              <div class="product-page__content">
-                <div class="product-page__list">
+              <div class="product__content">
+                <div class="product__list">
                   <div class="product__card product__item">
                     <div class="product__card-head">
                       <div
