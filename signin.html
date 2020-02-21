@@ -63,7 +63,7 @@
       </header>
       
 
-      <main class="content recover-page">
+      <main class="content signin-page">
         
         <section class="breadcrumbs">
           <div class="container">
@@ -77,26 +77,63 @@
         
 
         
-        <section class="common__form recover__form">
+        <section class="common__form signin__form">
           <div class="container">
-            <div class="common__form-head recover__form-head">
-              <div class="common__form-tip recover__form-tip">
-                Please enter the email address for your account. A verification code will be sent to you. Once you have
-                received the verification code, you will be able to choose a new password for your account.
+            <div class="common__form-head account__form-head">
+              <div class="common__form-title account__form-title">Create Your Account</div>
+              <div class="common__form-tip account__form-tip">
+                Please fill the following fields with appropriate information to register a new MartPlace account.
               </div>
             </div>
             <form action="">
+              <label for="name">Your Name</label>
+              <input
+                id="name"
+                type="name"
+                name="text"
+                minlength="3"
+                placeholder="Enter your name..."
+                autofocus
+                required
+              />
               <label for="email">Email Address</label>
               <input
                 id="email"
                 type="email"
                 name="password"
                 minlength="3"
-                placeholder="Enter your email address..."
-                autofocus
+                placeholder="Enter your email address"
                 required
               />
-              <button type="submit">Submit Now</button>
+              <label for="username">Username</label>
+              <input
+                id="username"
+                type="text"
+                name="username"
+                minlength="3"
+                placeholder="Enter your username..."
+                required
+              />
+              <label for="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                minlength="3"
+                placeholder="Enter your password..."
+                required
+              />
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                id="confirm_password"
+                type="password"
+                name="confirm_password"
+                minlength="3"
+                placeholder="Enter your password..."
+                required
+              />
+              <button type="submit">Register Now</button>
+              <div class="account__form-login">Already have an account? <a href="#">Login</a></div>
             </form>
           </div>
         </section>
