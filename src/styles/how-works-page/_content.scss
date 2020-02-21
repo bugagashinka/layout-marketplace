@@ -1,55 +1,57 @@
-.how-works {
-  &__item {
-    @include clearfix;
+.how-works-page {
+  .how-works {
+    &__item {
+      @include clearfix;
 
-    padding: 100px 0px;
-    background-color: #eff1f5;
+      padding: 100px 0px;
+      background-color: #eff1f5;
 
-    &-img {
-      float: right;
-      width: 458px;
-      height: 352px;
-    }
+      &-img {
+        float: right;
+        width: 458px;
+        height: 352px;
+      }
 
-    &-desc {
-      margin-right: 681px;
-    }
+      &-desc {
+        margin-right: 681px;
+      }
 
-    &-title {
-      margin: 0;
-      margin-bottom: 40px;
-      color: #000;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 46px;
-    }
+      &-title {
+        margin: 0;
+        margin-bottom: 40px;
+        color: #000;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 46px;
+      }
 
-    &-text {
-      max-width: 450px;
-      margin-bottom: 30px;
-      color: #555;
-      line-height: 30px;
-    }
-    &-btn {
-      @include button(18px, 36px, 25px, $prm-btn-color, #fff);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      &-text {
+        max-width: 450px;
+        margin-bottom: 30px;
+        color: #555;
+        line-height: 30px;
+      }
+      &-btn {
+        @include button(18px, 36px, 25px, $prm-btn-color, #fff);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
-      &:active,
-      &:hover {
-        color: #fff;
-        background-color: $prm-btn-color;
+        &:active,
+        &:hover {
+          color: #fff;
+          background-color: $prm-btn-color;
+        }
       }
     }
-  }
 
-  &__item:nth-child(odd) {
-    .how-works__item-img {
-      float: left;
+    &__item:nth-child(odd) {
+      .how-works__item-img {
+        float: left;
+      }
+      .how-works__item-desc {
+        margin: 0;
+        margin-left: 681px;
+      }
+      background-color: #fff;
     }
-    .how-works__item-desc {
-      margin: 0;
-      margin-left: 681px;
-    }
-    background-color: #fff;
   }
 }

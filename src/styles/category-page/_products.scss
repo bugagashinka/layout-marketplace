@@ -1,0 +1,211 @@
+$product-page-bg: #eff1f5;
+
+.category-page {
+  .product {
+    padding: 30px 0;
+    background-color: $product-page-bg;
+
+    a {
+      text-decoration: none;
+    }
+
+    &__inner {
+      display: flex;
+    }
+    &__aside {
+      margin-right: 30px;
+    }
+    //   General aside item styles
+    .aside__item {
+      width: 263px;
+      margin-bottom: 30px;
+      padding: 31px 28px 34px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+      background-color: #ffffff;
+
+      &-title {
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 17px;
+        border-bottom: 1px solid #e7ebee;
+        font-family: "Quicksand", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #010101;
+
+        &::before {
+          position: absolute;
+          right: 0;
+          top: 5px;
+          color: #555555;
+          font-family: Linearicons;
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+
+      &-list {
+        @include reset-list;
+        margin-left: 18px;
+
+        li {
+          padding: 10px 0;
+        }
+        a {
+          font-size: 15px;
+          color: #555;
+          font-weight: 400;
+        }
+      }
+    }
+    // End general aside item styles
+
+    //   Specific aside styles
+    .category__list {
+      li {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &::before {
+          content: "\e876";
+          position: absolute;
+          left: -18px;
+          top: 1px;
+          color: #747b86;
+          font-family: Linearicons;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 36px;
+        }
+      }
+    }
+    .filter__list {
+      li {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          left: -18px;
+          top: 14px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 1px solid #747b86;
+          background-color: #fff;
+        }
+      }
+    }
+    .aside__price-filter {
+      .aside__item-title {
+        margin-bottom: 30px;
+      }
+
+      .irs--round .irs-line {
+        height: 6px;
+        border-radius: 3px;
+        background-color: #efedf3;
+      }
+
+      .irs--round .irs-bar {
+        height: 6px;
+        border-radius: 3px;
+        background-color: #7347c1;
+      }
+
+      .irs-from,
+      .irs-single,
+      .irs-to {
+        top: 76px;
+      }
+
+      .irs--round .irs-from,
+      .irs--round .irs-single,
+      .irs--round .irs-to {
+        //   width: 80px;
+        max-width: 115px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #f1edf9;
+        color: #7347c1;
+        font-size: 15px;
+        line-height: 26px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      form {
+        text-align: center;
+
+        button {
+          @include button(15px, 32px, 22px, #fff, $prm-btn-color);
+          margin-top: 88px;
+          font-size: 15px;
+          font-weight: 500;
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    // End specific aside styles
+
+    // Product list styles
+    &__content {
+      width: 100%;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .product__item {
+      width: 262px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+      &-title {
+        white-space: initial;
+      }
+
+      &-content {
+        padding: 18px 19px 15px;
+      }
+
+      &-img {
+        border-radius: 4px 4px 0 0;
+        background-color: #3c6490;
+      }
+      &-stats {
+        display: flex;
+        justify-content: space-between;
+        padding: 19px 0px;
+        .product__item-sold {
+          color: #0674ec;
+          font-family: Quicksand;
+          font-size: 15px;
+          font-weight: 400;
+          &::before {
+            font-family: "Linearicons";
+            margin-right: 10px;
+          }
+        }
+      }
+      &-footer {
+        padding: 15px 20px;
+        .product__item-plugin {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  // Pagination styles {
+  .pagination {
+    padding-bottom: 120px;
+    background-color: $product-page-bg;
+    text-align: right;
+  }
+}

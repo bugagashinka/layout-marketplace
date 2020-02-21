@@ -1,71 +1,73 @@
-.benefits {
-  text-align: center;
-  padding: 120px 0;
+.home-page {
+  .benefits {
+    text-align: center;
+    padding: 120px 0;
 
-  h2 {
-    font-size: 36px;
-    line-height: 28px;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 29px;
+    h2 {
+      font-size: 36px;
+      line-height: 28px;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: 29px;
 
-    span {
-      color: #0674ec;
-    }
-  }
-
-  &__text {
-    max-width: 670px;
-    margin: 0px auto;
-    margin-bottom: 60px;
-    color: #555555;
-    line-height: 30px;
-  }
-}
-
-.benefits__inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .features__item {
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
-    padding: 55px 35px 59px;
-    margin-bottom: 30px;
-
-    &-num {
-      position: absolute;
-      top: 20px;
-      left: 19px;
-      opacity: 0.2;
-      color: #5c87f8;
-      font-size: 48px;
-      line-height: 35px;
-      font-weight: 300;
-    }
-
-    @each $name, $color in $features-colors {
-      .lnr-#{$name} {
-        color: unquote($color);
+      span {
+        color: #0674ec;
       }
     }
 
-    &-image {
-      display: inline-block;
-      font-family: "Linearicons";
-      font-size: 60px;
-    }
-
-    &-title {
-      margin-top: 50px;
-      font-size: 24px;
-    }
-
-    &-text {
+    &__text {
+      max-width: 670px;
+      margin: 0px auto;
+      margin-bottom: 60px;
       color: #555555;
       line-height: 30px;
+    }
+  }
+
+  .benefits__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .features__item {
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+      padding: 55px 35px 59px;
+      margin-bottom: 30px;
+
+      &-num {
+        position: absolute;
+        top: 20px;
+        left: 19px;
+        opacity: 0.2;
+        color: #5c87f8;
+        font-size: 48px;
+        line-height: 35px;
+        font-weight: 300;
+      }
+
+      @each $name, $color in $features-colors {
+        .lnr-#{$name} {
+          color: unquote($color);
+        }
+      }
+
+      &-image {
+        display: inline-block;
+        font-family: "Linearicons";
+        font-size: 60px;
+      }
+
+      &-title {
+        margin-top: 50px;
+        font-size: 24px;
+      }
+
+      &-text {
+        color: #555555;
+        line-height: 30px;
+      }
     }
   }
 }

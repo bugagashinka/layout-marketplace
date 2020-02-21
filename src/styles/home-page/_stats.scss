@@ -1,37 +1,37 @@
-.stats {
-  background-color: #0d0f13;
-  padding: 100px 0;
-  text-align: center;
+.home-page {
+  .stats {
+    background-color: #0d0f13;
+    padding: 100px 0;
+    text-align: center;
 
-  &__list {
-    @include reset-list;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__item {
-    .lnr {
-      font-size: 48px;
+    &__list {
+      @include reset-list;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    &-data {
-      font-size: 36px;
-      margin-top: 52px;
-    }
+    &__item {
+      .lnr {
+        font-size: 48px;
+      }
 
-    &-caption {
-      font-size: 18px;
-      line-height: 36px;
-      color: #fff;
-    }
+      &-data {
+        font-size: 36px;
+        margin-top: 52px;
+      }
 
-    @each $name, $color in $stats-colors {
-      &-#{$name} {
-        color: unquote($color);
+      &-caption {
+        font-size: 18px;
+        line-height: 36px;
+        color: #fff;
+      }
+
+      @each $name, $color in $stats-colors {
+        &-#{$name} {
+          color: unquote($color);
+        }
       }
     }
   }
 }
-
-//

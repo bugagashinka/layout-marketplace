@@ -1,69 +1,71 @@
-.news {
-  padding: 122px 0 120px;
-  background-color: #eff1f5;
-  text-align: center;
+.home-page {
+  .news {
+    padding: 122px 0 120px;
+    background-color: #eff1f5;
+    text-align: center;
 
-  &__title {
-    margin: 0 0 36px;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #000;
+    &__title {
+      margin: 0 0 36px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #000;
 
-    span {
+      span {
+        color: #0674ec;
+      }
+    }
+
+    &__text {
+      width: 671px;
+      color: #555;
+      line-height: 30px;
+      margin: 0 auto 60px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__item-footer {
+      position: relative;
+      font-size: 15px;
+      color: #7e7e7e;
+      padding: 24px 30px;
+      justify-content: space-between;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 50%;
+        width: 1px;
+        height: 40px;
+        background: #ececec;
+      }
+    }
+
+    &__item-date {
+      flex-grow: 2;
+      color: #999;
+    }
+
+    .news__footer-stats {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+    }
+    .lnr-clock::before {
+      margin-right: 8px;
       color: #0674ec;
     }
-  }
-
-  &__text {
-    width: 671px;
-    color: #555;
-    line-height: 30px;
-    margin: 0 auto 60px;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__item-footer {
-    position: relative;
-    font-size: 15px;
-    color: #7e7e7e;
-    padding: 24px 30px;
-    justify-content: space-between;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      left: 50%;
-      width: 1px;
-      height: 40px;
-      background: #ececec;
+    .lnr-bubble::before {
+      margin-right: 7px;
     }
-  }
-
-  &__item-date {
-    flex-grow: 2;
-    color: #999;
-  }
-
-  .news__footer-stats {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-  }
-  .lnr-clock::before {
-    margin-right: 8px;
-    color: #0674ec;
-  }
-  .lnr-bubble::before {
-    margin-right: 7px;
-  }
-  .lnr-eye::before {
-    margin-right: 6px;
+    .lnr-eye::before {
+      margin-right: 6px;
+    }
   }
 }

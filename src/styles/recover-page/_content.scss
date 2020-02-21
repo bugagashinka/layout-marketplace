@@ -1,21 +1,23 @@
 .recover-page {
-  padding: 0px 0px 121px;
-  background-color: #eff1f5;
+  .content {
+    padding: 0px 0px 121px;
+    background-color: #eff1f5;
 
-  .breadcrumbs {
-    margin-bottom: 72px;
+    .breadcrumbs {
+      margin-bottom: 72px;
+    }
   }
-}
 
-.recover__form {
-  &-head {
-    margin-bottom: 40px;
-  }
-  &-tip {
-    line-height: 30px;
-  }
-  label {
-    margin-bottom: 15px;
-    font-weight: 500;
+  .recover__form {
+    &-head {
+      margin-bottom: 40px;
+    }
+    &-tip {
+      line-height: 30px;
+    }
+    label {
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
   }
 }
