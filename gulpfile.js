@@ -145,7 +145,10 @@ function watch(done) {
 }
 
 function deploy(done) {
-  ghPages.publish(settings.paths.dest.root, done);
+  if (!isDev) {
+    ghPages.publish(settings.paths.dest.root, done);
+  }
+  done();
 }
 
 function build(done) {
