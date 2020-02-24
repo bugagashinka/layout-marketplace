@@ -1,7 +1,7 @@
 $(function() {
-  var productList = document.querySelector(".new-products__list");
-  if (productList) {
-    mixitup(".new-products__list");
+  // General
+  function createSlider(container, config) {
+    $(container).slick(Object.assign(generalSlickConfig, config));
   }
 
   var generalRateConfig = {
@@ -11,8 +11,16 @@ $(function() {
     readOnly: true
   };
 
+  // ************** Home page **************
+
+  //Activate mixitup on the home page
+  var productList = document.querySelector(".home-page .new-products__list");
+  if (productList) {
+    mixitup(".new-products__list");
+  }
+
   // Product section
-  $(".product__item-rate").rateYo(generalRateConfig);
+  $(".rate__view").rateYo(generalRateConfig);
 
   // Weekly section
   $(".weekly__item-rate").rateYo(generalRateConfig);
@@ -27,13 +35,10 @@ $(function() {
     nextArrow: '<button type="button" class="slick-next"><span class="lnr lnr-chevron-right"></span></button>'
   };
 
-  function createSlider(container, config) {
-    $(container).slick(Object.assign(generalSlickConfig, config));
-  }
-  // Weekly section | Home page
+  // Weekly section
   createSlider(".weekly__slide-list", { appendArrows: ".weekly__buttons" });
 
-  // Followers section | Home page
+  // Followers section
   createSlider(".followers__slide-list", {
     appendArrows: ".followers__buttons",
     autoplay: false,
@@ -41,7 +46,24 @@ $(function() {
     slidesToScroll: 3
   });
 
-  // Aside price slider | Category page
+  // ************** Category page **************
+
+  //Activate mixitup on the category page
+  var productList = document.querySelector(".category-page .product__list");
+  if (productList) {
+    var categoryMixer = mixitup(".product__list");
+    $(".filter__order").change(function() {
+      var order = $(this)
+        .find("option:selected")
+        .data("sort");
+      console.log(order);
+      categoryMixer.sort(order).then(function(state) {
+        console.log(state.activeSort.sortString);
+      });
+    });
+  }
+
+  // Aside price slider
   $(".aside__price-slider").ionRangeSlider({
     skin: "round",
     type: "double",
@@ -51,13 +73,16 @@ $(function() {
     to: 300
   });
 
+  // Switch product view (list or grid) on the category page
   $(".filter__view-grid").on("click", function() {
     $(this).addClass("active");
     $(".filter__view-list").removeClass("active");
+    $(".product__list").removeClass("list-view");
   });
 
   $(".filter__view-list").on("click", function() {
     $(this).addClass("active");
     $(".filter__view-grid").removeClass("active");
+    $(".product__list").addClass("list-view");
   });
 });

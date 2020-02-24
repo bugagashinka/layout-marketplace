@@ -90,12 +90,12 @@
               </ul>
               <div class="filter__control">
                 <select class="filter__order" name="" id="">
-                  <option value="">Price : Low to High</option>
-                  <option value="">Price : High to Low</option>
-                  <option value="">Rate : Low to High</option>
-                  <option value="">Rate : High to Low</option>
-                  <option value="">Sold : Low to High</option>
-                  <option value="">Sold : High to Low</option>
+                  <option value="" data-sort="price:asc">Price : Low to High</option>
+                  <option value="" data-sort="price:desc">Price : High to Low</option>
+                  <option value="" data-sort="rate:asc">Rate : Low to High</option>
+                  <option value="" data-sort="rate:desc">Rate : High to Low</option>
+                  <option value="" data-sort="sold:asc">Sold : Low to High</option>
+                  <option value="" data-sort="sold:desc">Sold : High to Low</option>
                 </select>
                 <select class="filter__count" name="" id="">
                   <option value="count_12">12 Items Per Page</option>
@@ -172,9 +172,10 @@
                   </form>
                 </div>
               </aside>
+
               <div class="product__content">
                 <div class="product__list">
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="14" data-rate="34" data-sold="300">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -183,13 +184,52 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(34)</span>
+                        </div>
                         <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$14</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="19" data-rate="15" data-sold="255">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(15)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">255</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
@@ -197,7 +237,7 @@
                       <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
                     </div>
                   </div>
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="22" data-rate="52" data-sold="175">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -206,13 +246,114 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(52)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">175</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$22</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="21" data-rate="19" data-sold="120">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(19)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">120</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$21</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="18" data-rate="27" data-sold="77">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(27)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">77</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$18</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="19" data-rate="20" data-sold="200">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(20)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">200</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
@@ -220,7 +361,7 @@
                       <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
                     </div>
                   </div>
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="21" data-rate="64" data-sold="350">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -229,13 +370,52 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(64)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">350</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$21</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="19" data-rate="10" data-sold="101">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(10)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">101</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
@@ -243,7 +423,7 @@
                       <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
                     </div>
                   </div>
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="16" data-rate="99" data-sold="400">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -252,13 +432,52 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(99)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">400</a>
+                      </div>
+                    </div>
+                    <div class="product__card-footer product__item-footer">
+                      <div class="product__item-price">$16</div>
+                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
+                    </div>
+                  </div>
+                  <div class="product__card product__item mix" data-price="19" data-rate="35" data-sold="254">
+                    <div class="product__card-head">
+                      <div
+                        class="product__card-img product__item-img"
+                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
+                      ></div>
+                    </div>
+                    <div class="product__card-content product__item-content">
+                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
+                      <div class="product__item-subtitle">
+                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
+                        <a href="#" class="product__card-theme">Theme-Valley</a>
+                      </div>
+                      <div class="product__item-stats">
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(35)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">254</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
@@ -266,7 +485,7 @@
                       <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
                     </div>
                   </div>
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="25" data-rate="43" data-sold="130">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -275,21 +494,29 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(43)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">130</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
+                      <div class="product__item-price">$25</div>
                       <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
                     </div>
                   </div>
-                  <div class="product__card product__item">
+                  <div class="product__card product__item mix" data-price="19" data-rate="37" data-sold="245">
                     <div class="product__card-head">
                       <div
                         class="product__card-img product__item-img"
@@ -298,151 +525,21 @@
                     </div>
                     <div class="product__card-content product__item-content">
                       <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
+                      <div class="product__item-text">
+                        Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                      </div>
                       <div class="product__item-subtitle">
                         <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
                         <a href="#" class="product__card-theme">Theme-Valley</a>
                       </div>
                       <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
-                      </div>
-                    </div>
-                    <div class="product__card-footer product__item-footer">
-                      <div class="product__item-price">$19</div>
-                      <a href="#" class="product__card-plugin product__item-plugin">Plugin</a>
-                    </div>
-                  </div>
-                  <div class="product__card product__item">
-                    <div class="product__card-head">
-                      <div
-                        class="product__card-img product__item-img"
-                        style="background-image: url(./img/home-page/new-products/product-item.jpg);"
-                      ></div>
-                    </div>
-                    <div class="product__card-content product__item-content">
-                      <h3 class="product__card-title product__item-title">E-commerce Shopping Cart</h3>
-                      <div class="product__item-subtitle">
-                        <img class="product__card-avatar" src="./img/home-page/new-products/avatar.jpg" />
-                        <a href="#" class="product__card-theme">Theme-Valley</a>
-                      </div>
-                      <div class="product__item-stats">
-                        <span class="product__item-rate"></span>
-                        <a href="#" class="product__item-sold lnr lnr-cart">300</a>
+                        <span class="product__item-likes">90 loves</span>
+                        <span class="product__item-notes">90 Comments</span>
+                        <div class="product__item-rate">
+                          <span class="rate__view"></span>
+                          <span class="rate__number">(37)</span>
+                        </div>
+                        <a href="#" class="product__item-sold lnr lnr-cart">245</a>
                       </div>
                     </div>
                     <div class="product__card-footer product__item-footer">
