@@ -1,0 +1,103 @@
+.blog-page {
+  // General styles
+  .blog {
+    padding: 67px 0px 101px;
+    background-color: #eff1f5;
+    &__outer {
+      display: flex;
+    }
+  }
+  .posts__list {
+    max-width: 750px;
+    margin-right: 30px;
+  }
+  .blog__aside {
+    max-width: 361px;
+    width: 100%;
+  }
+
+  //   Post styles
+  .post {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+
+    &__img {
+      height: 430px;
+      background-color: #7385cd;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &__head {
+      padding: 40px 29px 30px;
+    }
+    &__title {
+      margin: 0px 0px 20px;
+      font-size: 30px;
+      font-weight: 500;
+      color: $price-color;
+    }
+    &__details {
+      padding: 20px 0px 30px;
+      border-bottom: 1px solid #ececec;
+      font-size: 15px;
+      color: #999999;
+      span::before {
+        font-family: Linearicons;
+        margin-right: 8px;
+      }
+    }
+    &__author {
+      margin-right: 28px;
+      span {
+        color: $price-color;
+      }
+      &::before {
+        content: "\e82b";
+      }
+    }
+    &__date {
+      margin-right: 26px;
+      &::before {
+        content: "\e864";
+      }
+    }
+    &__notes {
+      margin-right: 28px;
+      &::before {
+        content: "\e83f";
+      }
+    }
+    &__views {
+      &::before {
+        content: "\e81b";
+      }
+    }
+    &__content {
+      padding: 0px 28px 30px;
+    }
+    &__content-text {
+      margin-bottom: 20px;
+      line-height: 30px;
+    }
+    .post__view-btn {
+      @include button(8px, 16px, 21px, #fff, $prm-btn-color);
+      width: 140px;
+      height: 44px;
+      margin: 10px 0;
+      line-height: 28px;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  //   Pagination section styles
+  .pagination__inner {
+    margin-right: auto;
+    margin-left: 0;
+    padding: 20px 0;
+  }
+}
