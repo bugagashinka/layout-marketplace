@@ -107,4 +107,5 @@ $(function() {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+  $(".more__item-rate").rateYo(generalRateConfig);
 });
