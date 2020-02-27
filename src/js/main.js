@@ -115,4 +115,16 @@ $(function() {
     slidesToScroll: 3
   });
   $(".more__item-rate").rateYo(generalRateConfig);
+
+  // ************** Blog page *************
+  var asideBlogPosts = $(".aside__posts");
+  if (asideBlogPosts) {
+    asideBlogPosts.find(".tab").on("click", function() {
+      var id = $(this).attr("data-id");
+      asideBlogPosts.find(".tab").removeClass("active");
+      $(this).addClass("active");
+      asideBlogPosts.find(".tab__content-item").hide();
+      $("#tab-" + id).fadeIn();
+    });
+  }
 });
