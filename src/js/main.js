@@ -97,4 +97,14 @@ $(function() {
       $("#tab-" + id).fadeIn();
     });
   }
+  // Stats section
+  $(".product__stats-stars").rateYo(generalRateConfig);
+
+  // More products section
+  createSlider(".more__slide-list", {
+    arrow: false,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
 });
