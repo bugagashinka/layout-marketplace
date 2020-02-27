@@ -19,21 +19,25 @@ $anim-time: 0.55s;
     //   General aside item styles
     .aside__item {
       width: 263px;
+      max-height: 80px;
       margin-bottom: 30px;
       padding: 31px 28px 34px;
+      overflow: hidden;
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
       background-color: #ffffff;
+      transition: max-height 0.7s;
 
       &-title {
         position: relative;
         padding-bottom: 25px;
         margin-bottom: 17px;
-        border-bottom: 1px solid #e7ebee;
+        border-bottom: 1px solid transparent;
         font-family: "Quicksand", sans-serif;
         font-size: 20px;
         font-weight: 400;
         color: #010101;
+        transition: border 0.7s;
 
         &::before {
           position: absolute;
@@ -50,6 +54,8 @@ $anim-time: 0.55s;
       &-list {
         @include reset-list;
         margin-left: 18px;
+        opacity: 0;
+        transition: opacity 0.8s;
 
         li {
           padding: 10px 0;
@@ -140,7 +146,9 @@ $anim-time: 0.55s;
       }
 
       form {
+        opacity: 0;
         text-align: center;
+        transition: opacity 0.8s;
 
         button {
           @include button(15px, 32px, 22px, #fff, $prm-btn-color);
@@ -152,6 +160,21 @@ $anim-time: 0.55s;
       }
     }
     // End specific aside styles
+    // Aside expanded item styles
+    .aside__item_expanded {
+      height: auto;
+      max-height: 600px;
+      .aside__item-list {
+        opacity: 1;
+      }
+      .aside__item-title {
+        border-bottom: 1px solid #e7ebee;
+      }
+      form {
+        opacity: 1;
+      }
+    }
+    // End aside expanded item styles
 
     // Product list styles
     &__content {

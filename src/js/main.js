@@ -86,6 +86,13 @@ $(function() {
     $(".product__list").addClass("list-view");
   });
 
+  $(".aside__item-title").on("click", function() {
+    console.log($(this).parent());
+    $(this)
+      .parent()
+      .toggleClass("aside__item_expanded");
+  });
+
   // ************** Product page *************
   var productInfo = $(".product__details");
   if (productInfo) {
