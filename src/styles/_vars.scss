@@ -5,7 +5,7 @@ $prm-btn-color: #0674ec;
 $footer-top-bc: #262b30;
 $footer-copy-bc: #192027;
 
-// Stats section
+// Stats section | Home page
 $stats-colors: (
   "cases": "#feb71d",
   "sales": "#58c9e9",
@@ -13,7 +13,7 @@ $stats-colors: (
   "members": "#ff6a6d"
 );
 
-// Benefits section
+// Benefits section | Home page
 $features-colors: (
   "license": "#0674ec",
   "magic-wand": "#7f4ec2",
@@ -21,4 +21,14 @@ $features-colors: (
   "chart-bars": "#feb71d",
   "leaf": "#58c9e9",
   "phone": "#ff6a6d"
+);
+
+// Product section | Product page
+$product-links-colors: (
+  "facebook": "#395799",
+  "twitter": "#19b2f5",
+  "google": "#f05b44",
+  "pinterest": "#9c0c1c",
+  "linkedin": "#0da6be",
+  "dribbble": "#ea4c89"
 );

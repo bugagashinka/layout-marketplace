@@ -85,4 +85,16 @@ $(function() {
     $(".filter__view-grid").removeClass("active");
     $(".product__list").addClass("list-view");
   });
+
+  // ************** Product page *************
+  var productInfo = $(".product__details");
+  if (productInfo) {
+    productInfo.find(".tab").on("click", function(event) {
+      var id = $(this).attr("data-id");
+      productInfo.find(".tab__content-item").hide();
+      productInfo.find(".tab").removeClass("active");
+      $(this).addClass("active");
+      $("#tab-" + id).fadeIn();
+    });
+  }
 });

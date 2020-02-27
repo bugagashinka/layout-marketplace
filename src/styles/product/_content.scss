@@ -1,0 +1,117 @@
+.product-page {
+  .title {
+    margin: 0;
+  }
+
+  .content {
+    background-color: #eff1f5;
+  }
+  .product__inner {
+    display: flex;
+  }
+
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    @include reset-link(#fff);
+    font-family: icomoon;
+    line-height: 42px;
+    text-align: center;
+    vertical-align: middle;
+    & + .social-btn {
+      margin-left: 13px;
+    }
+  }
+
+  .product {
+    margin: 70px 0 120px;
+
+    &__content {
+      max-width: 750px;
+      width: 100%;
+      margin-right: 30px;
+    }
+
+    // Product overview styles
+    &-overview {
+      margin-bottom: 28px;
+      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+
+    &__img {
+      width: 750px;
+      height: 430px;
+      border-radius: 4px 4px 0 0;
+      background-color: #868686;
+    }
+
+    &__links,
+    &__socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    &__socials {
+      position: relative;
+      padding-bottom: 40px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 690px;
+        height: 1px;
+        background-color: #e8e8e8;
+      }
+    }
+    &__link-btn {
+      @include button(16px, 20px, 25px, #fff, $prm-btn-color);
+      width: 190px;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .share__btn,
+    .add__btn {
+      font-size: 15px;
+      font-weight: 500;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+    .add__btn {
+      color: #7347c1;
+      margin-left: 30px;
+      &::before {
+        content: "\e813";
+        margin-right: 9px;
+        font-family: Linearicons;
+        font-size: 15px;
+        vertical-align: bottom;
+      }
+    }
+    .share__btn {
+      color: #000;
+      margin-right: 20px;
+      &::before {
+        content: "\ea82";
+        font-family: icomoon;
+        margin-right: 14px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    @each $name, $color in $product-links-colors {
+      .icon-#{$name} ~ a {
+        background-color: unquote($color);
+      }
+    }
+  }
+}
