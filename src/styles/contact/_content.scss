@@ -1,0 +1,118 @@
+.contact-page {
+  .breadcrumbs {
+    color: #fff;
+    text-align: center;
+    &__title {
+      margin: 0 0 28px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    &__subtitle {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  .contact {
+    padding: 120px 0 0;
+    background-color: #eff1f5;
+    text-align: center;
+
+    &__title {
+      margin: 0;
+      margin-bottom: 35px;
+      font-size: 36px;
+      font-weight: 400;
+      span {
+        color: $price-color;
+      }
+    }
+    &__subtitle {
+      max-width: 675px;
+      margin: 0px auto 60px;
+      line-height: 30px;
+      color: #555555;
+    }
+    .contact-method__list {
+      margin-bottom: 47px;
+    }
+
+    .contact-method {
+      display: flex;
+      justify-content: space-between;
+
+      &__item {
+        max-width: 360px;
+        padding: 48px 64px;
+        background-color: #fff;
+      }
+
+      &__icon {
+        display: inline-block;
+        margin-bottom: 45px;
+        font-size: 48px;
+        color: $price-color;
+      }
+
+      &__title {
+        margin-bottom: 35px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      &__data {
+        width: 235px;
+        color: #555;
+        line-height: 30px;
+      }
+      &__link {
+        @include reset-link(#555);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__form {
+      width: initial;
+      margin-bottom: 120px;
+      padding: 30px 0;
+      background-color: #fff;
+
+      &-title {
+        padding-bottom: 30px;
+        margin: 25px 0;
+        border-bottom: 1px solid #e8ebf0;
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+
+    .form__row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .form__inner {
+      margin: 0 180px;
+    }
+    .form__footer {
+      width: auto;
+      margin: 0 15px;
+    }
+    input {
+      margin: 15px;
+    }
+    textarea {
+      margin: 20px 0 15px;
+      width: 100%;
+      padding: 18px 50px;
+      resize: none;
+    }
+    .contact-btn {
+      margin: 15px 0px 30px;
+    }
+    .contact-map {
+      background-color: #262b30;
+    }
+  }
+}
