@@ -16,7 +16,7 @@ $(function() {
   //Activate mixitup on the home page
   var productList = document.querySelector(".home-page .new-products__list");
   if (productList) {
-    mixitup(".new-products__list");
+    mixitup(productList);
   }
 
   // Product section
@@ -51,7 +51,7 @@ $(function() {
   //Activate mixitup on the category page
   var productList = document.querySelector(".category-page .product__list");
   if (productList) {
-    var categoryMixer = mixitup(".product__list");
+    var categoryMixer = mixitup(productList);
     $(".filter__order").change(function() {
       var order = $(this)
         .find("option:selected")
@@ -96,6 +96,8 @@ $(function() {
   var productInfo = $(".product__details");
   if (productInfo) {
     productInfo.find(".tab").on("click", function(event) {
+      if ($(this).hasClass("active")) return;
+
       var id = $(this).attr("data-id");
       productInfo.find(".tab__content-item").hide();
       productInfo.find(".tab").removeClass("active");
@@ -116,9 +118,17 @@ $(function() {
   $(".more__item-rate").rateYo(generalRateConfig);
 
   // ************** Blog page *************
+  //Activate mixitup on the blog page
+  var blogPostsList = document.querySelector(".blog-page .posts__list");
+  if (blogPostsList) {
+    mixitup(blogPostsList);
+  }
+
   var asideBlogPosts = $(".aside__posts");
   if (asideBlogPosts) {
     asideBlogPosts.find(".tab").on("click", function() {
+      if ($(this).hasClass("active")) return;
+
       var id = $(this).attr("data-id");
       asideBlogPosts.find(".tab").removeClass("active");
       $(this).addClass("active");

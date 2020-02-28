@@ -174,16 +174,24 @@
 
       &:hover {
         background-color: $prm-btn-color;
-        a {
+        button {
           color: #fff;
         }
       }
 
-      a {
-        text-decoration: none;
+      button {
         color: $prm-btn-color;
+        background: transparent;
+        border: none;
         transition: color 0.5s;
+        cursor: pointer;
       }
+
+      // a {
+      //   text-decoration: none;
+      //   color: $prm-btn-color;
+      //   transition: color 0.5s;
+      // }
     }
   }
 
