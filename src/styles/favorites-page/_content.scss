@@ -1,0 +1,17 @@
+.favorites-page {
+  // Pagination section styles
+  .content {
+    background-color: $product-page-bg;
+  }
+  .pagination {
+    padding: 16px 0;
+
+    &__inner {
+      margin: 0 auto;
+    }
+  }
+
+  &__join {
+    margin-top: 105px;
+  }
+}

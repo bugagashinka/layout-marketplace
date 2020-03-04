@@ -1,0 +1,77 @@
+.favorites-page {
+  .filter {
+    position: relative;
+    z-index: 2;
+    // padding: 29px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nav {
+      @include horizontal-list(40px, #0674ec);
+
+      span.active,
+      a.active {
+        color: #555;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 24px;
+      span {
+        font-weight: 500;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+    }
+    &__control {
+      width: 220px;
+      margin: 29px 0;
+      margin-right: 29px;
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: 1px solid #eceff2;
+      vertical-align: bottom;
+    }
+    &__by {
+      align-self: stretch;
+      margin: 0;
+      margin-right: 29px;
+      max-width: 140px;
+    }
+    &__order {
+      margin-right: 75px;
+    }
+
+    &__view {
+      display: inline-block;
+      padding: 9px 12px;
+      border-radius: 3px;
+      border: 1px solid #eceff2;
+
+      button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      button:active,
+      button.active {
+        path {
+          fill: #0674ec;
+        }
+      }
+    }
+  }
+}

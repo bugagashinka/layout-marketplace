@@ -133,4 +133,32 @@ $(function() {
       $("#tab-" + id).fadeIn();
     });
   }
+
+  // ************** Favorite page *************
+  var favoritesProductsList = document.querySelector(".favorites-page .favorites-products");
+
+  if (favoritesProductsList) {
+    var favoriteMixer = mixitup(favoritesProductsList);
+
+    $(".filter__by").change(function() {
+      var orderBy = $(this)
+        .find("option:selected")
+        .val();
+      var orderFilter = $(".filter__order");
+      var orderFilterDisabled = orderBy === "default";
+      orderFilter.prop("disabled", orderFilterDisabled);
+
+      if (!orderFilterDisabled) {
+        orderFilter.find("option").hide();
+        orderFilter.find("[data-sort^=" + orderBy + "]").show();
+      }
+    });
+
+    $(".filter__order").change(function() {
+      var order = $(this)
+        .find("option:selected")
+        .data("sort");
+      favoriteMixer.sort(order);
+    });
+  }
 });
