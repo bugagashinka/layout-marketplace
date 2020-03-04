@@ -49,17 +49,14 @@ $(function() {
   // ************** Category page **************
 
   //Activate mixitup on the category page
-  var productList = document.querySelector(".category-page .product__list");
+  var productList = document.querySelector(".category-page .products__list");
   if (productList) {
     var categoryMixer = mixitup(productList);
     $(".filter__order").change(function() {
       var order = $(this)
         .find("option:selected")
         .data("sort");
-      console.log(order);
-      categoryMixer.sort(order).then(function(state) {
-        console.log(state.activeSort.sortString);
-      });
+      categoryMixer.sort(order);
     });
   }
 
@@ -77,13 +74,13 @@ $(function() {
   $(".filter__view-grid").on("click", function() {
     $(this).addClass("active");
     $(".filter__view-list").removeClass("active");
-    $(".product__list").removeClass("list-view");
+    $(".products__list").removeClass("list-view");
   });
 
   $(".filter__view-list").on("click", function() {
     $(this).addClass("active");
     $(".filter__view-grid").removeClass("active");
-    $(".product__list").addClass("list-view");
+    $(".products__list").addClass("list-view");
   });
 
   $(".aside__item-title").on("click", function() {

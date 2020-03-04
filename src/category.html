@@ -89,19 +89,19 @@
                 <li><span class="active">Popular Products</span></li>
               </ul>
               <div class="filter__control">
-                <select class="filter__order" name="" id="">
-                  <option value="" data-sort="price:asc">Price : Low to High</option>
-                  <option value="" data-sort="price:desc">Price : High to Low</option>
-                  <option value="" data-sort="rate:asc">Rate : Low to High</option>
-                  <option value="" data-sort="rate:desc">Rate : High to Low</option>
-                  <option value="" data-sort="sold:asc">Sold : Low to High</option>
-                  <option value="" data-sort="sold:desc">Sold : High to Low</option>
+                <select class="filter__order" name="order__filter">
+                  <option value="price_asc" data-sort="price:asc">Price : Low to High</option>
+                  <option value="price_desc" data-sort="price:desc">Price : High to Low</option>
+                  <option value="rate_asc" data-sort="rate:asc">Rate : Low to High</option>
+                  <option value="rate_desc" data-sort="rate:desc">Rate : High to Low</option>
+                  <option value="sold_asc" data-sort="sold:asc">Sold : Low to High</option>
+                  <option value="sold_desc" data-sort="sold:desc">Sold : High to Low</option>
                 </select>
-                <select class="filter__count" name="" id="">
-                  <option value="count_12">12 Items Per Page</option>
-                  <option value="count_12">24 Items Per Page</option>
-                  <option value="count_58">58 Items Per Page</option>
-                  <option value="count_118">118 Items Per Page</option>
+                <select class="filter__count" name="count__filter">
+                  <option value="12">12 Items Per Page</option>
+                  <option value="12">24 Items Per Page</option>
+                  <option value="58">58 Items Per Page</option>
+                  <option value="118">118 Items Per Page</option>
                 </select>
                 <div class="filter__view">
                   <button class="filter__view-grid active">
@@ -136,10 +136,10 @@
         <!-- End Filter section -->
 
         <!-- Product section -->
-        <section class="product">
+        <section class="products">
           <div class="container">
-            <div class="product__inner">
-              <aside class="product__aside">
+            <div class="products__inner">
+              <aside class="products__aside">
                 <div class="aside__item aside__category aside__item_expanded">
                   <div class="aside__item-title lnr lnr-chevron-down">Categories</div>
                   <ul class="aside__item-list category__list">
@@ -173,8 +173,8 @@
                 </div>
               </aside>
 
-              <div class="product__content">
-                <div class="product__list">
+              <div class="products__content">
+                <div class="products__list">
                   <div class="product__card product__item mix" data-price="14" data-rate="34" data-sold="300">
                     <div class="product__card-head">
                       <div
