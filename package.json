@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "ion-rangeslider": "^2.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
